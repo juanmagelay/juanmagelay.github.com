@@ -1,0 +1,196 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+	background-color: #DEFFF8;
+}
+
+/* iPhone 11 Pro Max 414x1306px */
+
+	/* Bottom bar */
+
+.navbar {
+	height: 78px;
+	border-top: 1px solid #3626A7;
+	position: fixed;
+  	bottom: 0;
+	background: #FFFFFF;
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 414px;
+	margin: 0 auto;
+}
+
+nav {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav .CY-logo-reduced {
+	position: relative;
+	left: 24px;
+	top: 20.56px;
+	height: 38.61586380004883px;
+	width: 53px;
+	border-radius: 0px;
+}
+
+nav .nav-items {
+	position: relative;
+	top: 23px;
+	right: 27px;
+}
+
+nav .nav-items ul {
+	display: flex;
+}
+
+.nav-items li {
+	list-style: none;
+	margin-left: 44px;
+}
+
+.nav-items li a {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.nav-items li a .item {
+	color: #3626A7;
+	text-decoration: none;
+}
+
+.nav-items li .item a:visited {
+	color: rgba(54, 38, 167, 0.25);
+}
+
+.nav-items li .item a:link  {
+	color: rgba(54, 38, 167, 0.25);
+}
+
+.nav-items li .item a:hover {
+	color: #3626A7;
+}
+
+.nav-items li .item a:active {
+	color: #3626A7;
+}
+
+	/* Main */
+
+.main .container {
+	position: relative;
+	top: 84px;
+	display: table;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 127px;
+}
+
+h1 {
+	width: 318px;
+	height: 58px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	color: #3626A7;
+	margin-bottom: 51px;
+}
+
+.card-eighth-height {
+	width: 318px;
+	height: 66.12px;
+	border-radius: 6px;
+	filter: drop-shadow(0px 4px 4px rgba(54, 38, 167, 0.25));
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+	padding-left: 12px;
+}
+
+.card-eighth-height .content .col1 {
+	width: 80px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.card-eighth-height .ranking-number {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 36px;
+	color: #3626A7;
+	text-align: center;
+}
+
+.card-eighth-height .content .col2 {
+	text-align: left;
+	display: inline-block;
+	width: 210px;
+}
+
+.card-eighth-height .grid-item-title {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #3626A7;
+	display: block;
+	line-height: 14px;
+}
+
+.card-eighth-height .grid-item-economics {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	color: #B43E8F;
+	display: block;
+}
+
+.secondary {
+	background: #CAFFF4;
+}
+
+
+	/* Botones */
+
+.button-full-width-primary {
+	width: 318px;
+	height: 67px;
+	border-radius: 6px;
+	background-color: #3626A7;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.button-full-width-primary .button-full-width-primary-text {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+	width: 100%;
+}
