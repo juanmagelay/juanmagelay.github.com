@@ -89,6 +89,9 @@ nav .nav-items ul {
 }
 
 	/* Main */
+.main {
+	margin-bottom: 250px;
+}
 
 .main .container {
 	position: relative;
