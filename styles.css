@@ -1,107 +1,29 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-}
-
 body {
 	font-family: Montserrat, sans-serif;
 	background-color: #DEFFF8;
 }
 
-/* iPhone 11 Pro Max 414x1306px */
+/* Sm - Mobile */
 
 	/* Bottom bar */
+	.navbar .col .navbar-nav .nav-item .nav-link {
+		color: #3626A7;
+	}
 
-.navbar {
-	height: 78px;
-	border-top: 1px solid #3626A7;
-	position: fixed;
-  	bottom: 0;
-	background: #FFFFFF;
-	width: 100%;
-}
 
 .wrapper {
 	max-width: 414px;
 	margin: 0 auto;
 }
 
-nav {
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-nav .CY-logo-reduced {
+.CY-logo-reduced {
 	position: relative;
-	left: 24px;
-	top: 20.56px;
 	height: 38.61586380004883px;
 	width: 53px;
 	border-radius: 0px;
 }
 
-nav .nav-items {
-	position: relative;
-	top: 23px;
-	right: 27px;
-}
-
-nav .nav-items ul {
-	display: flex;
-}
-
-.nav-items li {
-	list-style: none;
-	margin-left: 44px;
-}
-
-.nav-items li a {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 22px;
-	text-align: center;
-	text-decoration: none;
-}
-
-.nav-items li a .item {
-	color: #3626A7;
-	text-decoration: none;
-}
-
-.nav-items li .item a:visited {
-	color: rgba(54, 38, 167, 0.25);
-}
-
-.nav-items li .item a:link  {
-	color: rgba(54, 38, 167, 0.25);
-}
-
-.nav-items li .item a:hover {
-	color: #3626A7;
-}
-
-.nav-items li .item a:active {
-	color: #3626A7;
-}
-
 	/* Main */
-.main {
-	margin-bottom: 250px;
-}
-
-.main .container {
-	position: relative;
-	top: 84px;
-	display: table;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 127px;
-}
-
 h1 {
 	width: 318px;
 	height: 58px;
