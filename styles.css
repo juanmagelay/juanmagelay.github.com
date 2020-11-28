@@ -21,6 +21,12 @@ body {
 		height: 38.62px;
 	}
 
+	@media (max-width: 320px) {
+		.navbar .col .navbar-nav .nav-item .nav-link {
+			font-size: 16px;
+		}
+	}
+
 /* SM - Tablet - 600px */
 
 	/* Top bar */
