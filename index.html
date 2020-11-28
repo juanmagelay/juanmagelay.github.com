@@ -111,14 +111,31 @@
 		-->
 
 	<!--  Navbar  -->
-	<nav class="navbar justify-content-between fixed-bottom navbar-expand navbar-light bg-light">
+	<nav class="mobile-navbar d-sm-none navbar justify-content-between fixed-bottom navbar-expand navbar-light bg-light">
 		<div class="col">
 			<a class="navbar-brand" href="index.html">
-				<img src="Resources/CY-logo-reduced.svg">
+				<img class="CY-logo-reduced" src="Resources/CY-logo-reduced.svg">
 			</a>
 		</div>
-		<div class="col col-md-3 col-lg-2 col-xl-1">
-			<ul class="navbar-nav">
+		<div class="col col-md-3 col-lg-2 col-xl-2">
+			<ul class="navbar-nav justify-content-end">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Inversiones <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Gastos</a>					
+				</li>	
+			</ul>
+		</div>
+	</nav>
+	<nav class="desktop-navbar d-none d-sm-inline-flex navbar justify-content-between fixed-top navbar-expand navbar-light bg-light">
+		<div class="col">
+			<a class="navbar-brand" href="index.html">
+				<img class="CY-logo-default" src="Resources/CY-logo-default.svg">
+			</a>
+		</div>
+		<div class="col col-md-3 col-lg-2 col-xl-2">
+			<ul class="navbar-nav justify-content-end">
 				<li class="nav-item active">
 					<a class="nav-link" href="index.html">Inversiones <span class="sr-only">(current)</span></a>
 				</li>

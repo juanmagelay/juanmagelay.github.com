@@ -3,25 +3,49 @@ body {
 	background-color: #DEFFF8;
 }
 
-/* Sm - Mobile */
+.navbar .col .navbar-nav .nav-item .nav-link {
+	color: rgba(54, 38, 167, 0.25);
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.navbar .col .navbar-nav .active .nav-link {
+	color: #3626A7;
+}
+
+/* XS - Mobile - 375px */
 
 	/* Bottom bar */
-	.navbar .col .navbar-nav .nav-item .nav-link {
-		color: #3626A7;
+
+	.CY-logo-reduced {
+		height: 38.62px;
+	}
+
+/* SM - Tablet - 600px */
+
+	/* Top bar */
+
+	.CY-logo-default {
+		height: 43px;
 	}
 
 
-.wrapper {
+	.wrapper {
 	max-width: 414px;
 	margin: 0 auto;
 }
 
-.CY-logo-reduced {
-	position: relative;
-	height: 38.61586380004883px;
-	width: 53px;
-	border-radius: 0px;
-}
+/* XL - Desktop - 1440px */
+	
+	/* Top bar */
+	
+	@media (min-width: 1440px) {
+		.navbar .col .navbar-nav .nav-item .nav-link {
+			font-size: 24px;
+		}
+	}
+
+
 
 	/* Main */
 h1 {
