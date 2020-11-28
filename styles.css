@@ -27,6 +27,13 @@ body {
 		}
 	}
 
+	/* Container */
+	
+	.container {
+		margin-top: 60px;
+	}
+	
+
 /* SM - Tablet - 600px */
 
 	/* Top bar */
@@ -55,7 +62,7 @@ body {
 
 	/* Main */
 h1 {
-	width: 318px;
+	width: 100%;
 	height: 58px;
 	font-family: Montserrat;
 	font-style: normal;
