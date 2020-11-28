@@ -3,6 +3,17 @@ body {
 	background-color: #DEFFF8;
 }
 
+h1 {
+	font-weight: bold;
+	font-size: 24px;
+	color: #3626A7;
+	margin-bottom: 51px;
+}
+
+.navbar {
+	background-color: #FFFFFF;
+}
+
 .navbar .col .navbar-nav .nav-item .nav-link {
 	color: rgba(54, 38, 167, 0.25);
 	font-weight: bold;
@@ -21,6 +32,10 @@ body {
 		height: 38.62px;
 	}
 
+	.mobile-navbar {
+		border-top: #3626A7 1px solid;
+	}
+
 	@media (max-width: 320px) {
 		.navbar .col .navbar-nav .nav-item .nav-link {
 			font-size: 16px;
@@ -28,131 +43,138 @@ body {
 	}
 
 	/* Container */
-	
+
 	.container {
 		margin-top: 60px;
+		margin-bottom: 90px;
+	}
+
+	/* Cards */
+	
+	.card {
+		background-color: #DEFFF8;
+		border: none;
+	}
+
+	/* List items */
+
+	.list-group-item {
+		height: 66.12px;
+		filter: drop-shadow(0px 4px 4px rgba(54, 38, 167, 0.25));
+		margin-bottom: 12px;
+		padding-left: 12px;
+		padding-top:0;
+		padding-bottom:0;
+		color: #3626A7;
+	}
+
+	.ranking-number {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 36px;
+		color: #3626A7;
+		width: 80px;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.asset-name {
+		font-weight: 500;
+		font-size: 14px;
+		color: #3626A7;
+		line-height: 8px;
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+
+	.asset-economics {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 10px;
+		color: #B43E8F;
+		margin-top: -5px;
+		margin-bottom: 0;
+	}
+
+	/* Buttons */
+	
+	.btn-primary {
+		background-color: #3626A7;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		color: #FFFFFF;
+		height: 66.12px;
+	}
+
+	/* Footer */
+	
+	.container-fluid {
+		margin-top: 60px;
+		margin-bottom: 64px;
 	}
 	
+	.footer {
+		background-color: #E5E5E5;
+		color: #3626A7;
+		font-size: 18px;
+		font-weight: bold;
+		height: 78px;
+	}
+
+	.footer .social-media {
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.footer .social-media a {
+		margin-right: 5px;
+		margin-left: 5px;
+	}
 
 /* SM - Tablet - 600px */
 
 	/* Top bar */
 
+	.desktop-navbar {
+		border-bottom: #3626A7 1px solid;
+		height: 99px;
+	}
+
 	.CY-logo-default {
 		height: 43px;
 	}
 
+/* LG - Desktop - 1024px */
 
-	.wrapper {
-	max-width: 414px;
-	margin: 0 auto;
-}
+	/* Container */
+
+	@media (min-width: 600px) {
+		
+		.container {
+			margin-top: 180px;
+		}
+
+		.container-fluid {
+			margin-top: 180px;
+			margin-bottom: 0;
+			border-top: #3626A7 1px solid;
+		}
+
+	}
 
 /* XL - Desktop - 1440px */
 	
 	/* Top bar */
 	
 	@media (min-width: 1440px) {
+		
 		.navbar .col .navbar-nav .nav-item .nav-link {
 			font-size: 24px;
 		}
+
 	}
 
 
 
-	/* Main */
-h1 {
-	width: 100%;
-	height: 58px;
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 29px;
-	color: #3626A7;
-	margin-bottom: 51px;
-}
 
-.card-eighth-height {
-	width: 318px;
-	height: 66.12px;
-	border-radius: 6px;
-	filter: drop-shadow(0px 4px 4px rgba(54, 38, 167, 0.25));
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 12px;
-	padding-left: 12px;
-}
-
-.card-eighth-height .content .col1 {
-	width: 80px;
-	text-align: center;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.card-eighth-height .ranking-number {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 36px;
-	color: #3626A7;
-	text-align: center;
-}
-
-.card-eighth-height .content .col2 {
-	text-align: left;
-	display: inline-block;
-	width: 210px;
-}
-
-.card-eighth-height .grid-item-title {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	color: #3626A7;
-	display: block;
-	line-height: 14px;
-}
-
-.card-eighth-height .grid-item-economics {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 22px;
-	color: #B43E8F;
-	display: block;
-}
-
-.secondary {
-	background: #CAFFF4;
-}
-
-
-	/* Botones */
-
-.button-full-width-primary {
-	width: 318px;
-	height: 67px;
-	border-radius: 6px;
-	background-color: #3626A7;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	text-align: center;
-}
-
-.button-full-width-primary .button-full-width-primary-text {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 22px;
-	color: #FFFFFF;
-	width: 100%;
-}
