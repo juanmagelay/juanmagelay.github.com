@@ -44,7 +44,7 @@ h1 {
 
 	/* Container */
 
-	.container {
+	.home-list {
 		margin-top: 60px;
 		margin-bottom: 90px;
 	}
@@ -139,19 +139,18 @@ h1 {
 	.desktop-navbar {
 		border-bottom: #3626A7 1px solid;
 		height: 99px;
+		background-color: #FFFFFF !important;
 	}
 
 	.CY-logo-default {
 		height: 43px;
 	}
 
-/* LG - Desktop - 1024px */
-
 	/* Container */
 
 	@media (min-width: 600px) {
-		
-		.container {
+	
+		.home-list {
 			margin-top: 180px;
 		}
 
@@ -162,6 +161,26 @@ h1 {
 		}
 
 	}
+
+/* MD - Tablet - 768px */
+	
+	/* Container */
+
+	@media (min-width: 768px) {
+	
+		.home-list {
+			margin-top: 180px;
+		}
+
+		.container-fluid {
+			margin-top: 180px;
+			margin-bottom: 0;
+			border-top: #3626A7 1px solid;
+		}
+
+	}
+
+/* LG - Desktop - 1024px */
 
 /* XL - Desktop - 1440px */
 	
