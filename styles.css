@@ -68,6 +68,10 @@ h1 {
 		color: #3626A7;
 	}
 
+	.result {
+		background-color: #CAFFF4;
+	}
+
 	.ranking-number {
 		font-weight: bold;
 		font-size: 24px;
@@ -120,6 +124,7 @@ h1 {
 		font-size: 18px;
 		font-weight: bold;
 		height: 78px;
+		border-top: #3626A7 1px solid;
 	}
 
 	.footer .social-media {
@@ -157,9 +162,11 @@ h1 {
 		.container-fluid {
 			margin-top: 180px;
 			margin-bottom: 0;
-			border-top: #3626A7 1px solid;
 		}
 
+		.footer .social-media {
+			font-size: 18px;
+		}
 	}
 
 /* MD - Tablet - 768px */
@@ -182,18 +189,54 @@ h1 {
 
 /* LG - Desktop - 1024px */
 
+@media (min-width: 1024px) {
+	
+	/* Top bar */
+
+	.navbar .col .navbar-nav .nav-item .nav-link {
+		font-size: 24px;
+	}
+
+	/* List items */
+
+	.list-group-item {
+		height: 97px;
+		margin-bottom: 20px;
+	}
+
+	.ranking-number {
+		font-size: 36px;
+		line-height: 36px;
+		width: 120px;
+	}
+
+	.asset-name {
+		font-size: 18px;
+		line-height: 18px;
+		margin-top: 16px;
+	}
+
+	.asset-economics {
+		font-size: 24px;
+	}
+
+	/* Buttons */
+
+	.btn-primary {
+		font-size: 24px;
+		height: 97px;
+	}
+
+	/* Footer */
+
+	.footer {
+		font-size: 24px;
+	}
+}
+
 /* XL - Desktop - 1440px */
 	
 	/* Top bar */
 	
-	@media (min-width: 1440px) {
-		
-		.navbar .col .navbar-nav .nav-item .nav-link {
-			font-size: 24px;
-		}
-
-	}
-
-
 
 
