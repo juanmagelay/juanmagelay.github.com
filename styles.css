@@ -109,6 +109,7 @@ h1 {
 		font-size: 18px;
 		color: #FFFFFF;
 		height: 66.12px;
+		line-height: 46px;
 	}
 
 	/* Footer */
@@ -225,6 +226,7 @@ h1 {
 	.btn-primary {
 		font-size: 24px;
 		height: 97px;
+		line-height: 76px;
 	}
 
 	/* Footer */
