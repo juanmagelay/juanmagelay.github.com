@@ -168,6 +168,10 @@ h1 {
 		color: #3626A7;
 	}
 
+	.second-ranking-col {
+		margin-top: -90px;
+	}
+	
 /* SM - Tablet - 600px */
 
 	/* Top bar */
@@ -223,6 +227,11 @@ h1 {
 			border-top: #3626A7 1px solid;
 		}
 
+		.btn-outline-primary {
+			height: 48.5px;
+			line-height: 30px;
+		}
+
 	}
 
 /* LG - Desktop - 1024px */
@@ -268,8 +277,8 @@ h1 {
 
 	.btn-outline-primary {
 		font-size: 24px;
-		height: 97px;
-		line-height: 76px;
+		height: 48.5px;
+		line-height: 30px;
 	}
 
 	/* Footer */
