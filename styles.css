@@ -10,6 +10,13 @@ h1 {
 	margin-bottom: 51px;
 }
 
+h2 {
+	font-weight: bold;
+	font-size: 18px;
+	color: #B43E8F;
+	margin-bottom: 25.5px;
+}
+
 .navbar {
 	background-color: #FFFFFF;
 }
@@ -183,6 +190,16 @@ h1 {
 		text-align: center;
 		margin-bottom: 12px;	
 	}
+
+	/* Filters */
+
+	.form-check {
+		
+	}
+
+	.form-check-input {
+
+	}
 	
 /* SM - Tablet - 600px */
 
@@ -250,6 +267,14 @@ h1 {
 
 @media (min-width: 1024px) {
 	
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+	
 	/* Top bar */
 
 	.navbar .col .navbar-nav .nav-item .nav-link {
@@ -313,6 +338,7 @@ h1 {
 		line-height: 36px;
 		margin-bottom: 20px;	
 	}
+
 }
 
 /* XL - Desktop - 1440px */
