@@ -31,7 +31,7 @@
 <body>
 	<div class="container">
 		<div class="title-and-filter row">
-			<div class="container col-md-6 col-xl-5">
+			<div class="container">
 				<h1>Todas las inversiones</h1>
 				<a href="ranking-filters.html" class="btn btn-outline-primary btn-lg btn-block" role="button">
 					<i class="fas fa-filter"></i>
@@ -133,16 +133,19 @@
 
 	<!--  Navbar  -->
 	<nav class="mobile-navbar d-sm-none navbar justify-content-between fixed-bottom navbar-expand navbar-light bg-light">
-		<div class="col-4">
+		<div class="col">
 			<a class="navbar-brand" href="index.html">
-				<i class="fas fa-arrow-left"></i>
+				<img class="CY-logo-reduced" src="Resources/CY-logo-reduced.svg">
 			</a>
 		</div>
-		<div class="col-8">
-			<ul class="navbar-nav justify-content-start">
+		<div class="col col-md-3 col-lg-2 col-xl-2">
+			<ul class="navbar-nav justify-content-end">
 				<li class="nav-item active">
-					Inversiones
+					<a class="nav-link" href="index.html">Inversiones <span class="sr-only">(current)</span></a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Gastos</a>					
+				</li>	
 			</ul>
 		</div>
 	</nav>

@@ -34,6 +34,9 @@ h1 {
 
 	.mobile-navbar {
 		border-top: #3626A7 1px solid;
+		color: #3626A7;
+		font-weight: bold;
+		height: 65.62px;
 	}
 
 	@media (max-width: 320px) {
@@ -110,8 +113,24 @@ h1 {
 		color: #FFFFFF;
 		height: 66.12px;
 		line-height: 46px;
+		border: #3626A7 1px solid;
 	}
 
+	.btn-outline-primary {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		color: #3626A7;
+		height: 66.12px;
+		line-height: 46px;
+		border: #3626A7 1px solid;
+	}
+
+	.btn-outline-primary .fa-filter {
+		margin-right: 20px;
+		margin-left: -20px;
+	}
+	
 	/* Footer */
 	
 	.container-fluid {
@@ -136,6 +155,17 @@ h1 {
 	.footer .social-media a {
 		margin-right: 5px;
 		margin-left: 5px;
+	}
+
+	/* Ranking */
+
+	.title-and-filter {
+		margin-bottom: -50px;
+		margin-top: 60px;
+	}
+
+	.fa-arrow-left  {
+		color: #3626A7;
 	}
 
 /* SM - Tablet - 600px */
@@ -167,6 +197,13 @@ h1 {
 
 		.footer .social-media {
 			font-size: 18px;
+		}
+
+		/* Ranking */
+
+		.title-and-filter {
+			margin-bottom: -170px;
+			margin-top: 150px;
 		}
 	}
 
@@ -229,10 +266,23 @@ h1 {
 		line-height: 76px;
 	}
 
+	.btn-outline-primary {
+		font-size: 24px;
+		height: 97px;
+		line-height: 76px;
+	}
+
 	/* Footer */
 
 	.footer {
 		font-size: 24px;
+	}
+
+	/* Ranking */
+
+	.title-and-filter {
+		margin-bottom: -160px;
+		margin-top: 160px;
 	}
 }
 
