@@ -30,30 +30,42 @@
 </head>
 <body>
 	<div class="container">
-		<div class="title-and-filter row d-flex justify-content-between">
-			<div class="container col-md-6 col-xl-5">
-				<h1>Estretegia sugerida según monto y plazo</h1>
-			</div>
-			<div class="container col-md-6 col-xl-5">
-				<a href="strategy-filters.html" class="btn btn-outline-primary btn-lg btn-block" role="button">
-					<i class="fas fa-filter"></i>
-					Filtrar 
-				</a>
-			</div>
-		</div>
 		<div class="row row-cols-1 row-cols-md-2">
-			<!--  Inputs  -->
-			<form class="home-list container col-md-6 col-xl-5">
-				<div class="justify-content-center">
+			<!--  Mejores inversiones  -->
+			<div class="home-list container col-md-6 col-xl-5">
+				<h1>Mejores inversiones a 30 días</h1>
+				<div class="card justify-content-center">
 					<ul class="list-group">
-						<input class="strategy-form-input list-group-item form-control form-control-lg" type="number" min="1" max="99999999" maxlength="8" placeholder="$100.000" autofocus>
-						<input class="strategy-form-input list-group-item form-control form-control-lg" type="number" min="1" max="999" maxlength="3" placeholder="30 días">
+						<li class="list-group-item rounded d-flex">
+							<p class="ranking-number align-self-center align-middle">1</p>
+							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
+								<p class="p-2 asset-name align-self-start">Plazo Fijo en Supervielle</p>
+								<p class="p-2 asset-economics align-self-start">37,0%</p>		
+							</div>
+						</li>
+						<li class="list-group-item rounded d-flex">
+							<p class="ranking-number align-self-center align-middle">2</p>
+							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
+								<p class="p-2 asset-name align-self-start">Dólares virtuales en Ripio</p>
+								<p class="p-2 asset-economics align-self-start">34,5%</p>		
+							</div>
+						</li>
+						<li class="list-group-item rounded d-flex">
+							<p class="ranking-number align-self-center align-middle">3</p>
+							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
+								<p class="p-2 asset-name align-self-start">Plazo Fijo UVA en Galicia</p>
+								<p class="p-2 asset-economics align-self-start">30,9%</p>		
+							</div>
+						</li>
 					</ul>
+					<a href="ranking.html" class="btn btn-primary btn-lg btn-block" role="button">Ver todas las inversiones
+					</a>
 				</div>
-			</form>
+			</div>
 
 			<!--  Estretegia sugerida  -->
-			<div class="home-list second-ranking-col container col-md-6 col-xl-5">
+			<div class="home-list container col-md-6 col-xl-5">
+				<h1>Estretegia sugerida para invertir $100.000</h1>
 				<div class="card justify-content-center">
 					<ul class="list-group">
 						<li class="list-group-item rounded d-flex">
@@ -85,6 +97,8 @@
 							</div>
 						</li>
 					</ul>
+					<a href="strategy.html" class="btn btn-primary btn-lg btn-block" role="button">Simular una inversión
+					</a>
 				</div>
 			</div>
 		</div>
@@ -103,16 +117,19 @@
 
 	<!--  Navbar  -->
 	<nav class="mobile-navbar d-sm-none navbar justify-content-between fixed-bottom navbar-expand navbar-light bg-light">
-		<div class="col-4">
+		<div class="col">
 			<a class="navbar-brand" href="index.html">
-				<i class="fas fa-arrow-left"></i>
+				<img class="CY-logo-reduced" src="Resources/CY-logo-reduced.svg">
 			</a>
 		</div>
-		<div class="col-8">
-			<ul class="navbar-nav justify-content-start">
+		<div class="col col-md-3 col-lg-2 col-xl-2">
+			<ul class="navbar-nav justify-content-end">
 				<li class="nav-item active">
-					Inversiones
+					<a class="nav-link" href="index.html">Inversiones <span class="sr-only">(current)</span></a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="spends.html">Gastos</a>					
+				</li>	
 			</ul>
 		</div>
 	</nav>
