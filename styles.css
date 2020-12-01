@@ -32,6 +32,25 @@ h2 {
 	color: #3626A7;
 }
 
+/* Expenses */
+.card-filled {
+	color: #FFFFFF;
+	font-weight: normal;
+}
+
+.card-filled .card {
+	background-color: #B43E8F;
+}
+
+.card-filled .card .card-body h3{
+	font-family: Montserrat, sans-serif;
+	font-weight: bold;
+}
+
+.card-filled .card .card-body .fa-money-bill{
+	font-size: 50px;
+}
+
 /* XS - Mobile - 375px */
 
 	/* Bottom bar */
