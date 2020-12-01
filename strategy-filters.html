@@ -4,7 +4,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Cuotify - Tomamos tus decisiones financieras</title>
+	<title>Cuotify - Todas las inversiones</title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160043679-1"></script>
@@ -30,95 +30,69 @@
 </head>
 <body>
 	<div class="container">
-		<div class="title-and-filter row d-flex justify-content-between">
-			<div class="container col-md-6 col-xl-5">
-				<h1>Estretegia sugerida según monto y plazo</h1>
-			</div>
-			<div class="container col-md-6 col-xl-5">
-				<a href="ranking-filters.html" class="btn btn-outline-primary btn-lg btn-block" role="button">
-					<i class="fas fa-filter"></i>
-					Filtrar 
-				</a>
-			</div>
-		</div>
 		<div class="row row-cols-1 row-cols-md-2">
-			<!--  Inputs  -->
-			<form class="home-list container col-md-6 col-xl-5">
-				<div class="justify-content-center">
-					<ul class="list-group">
-						<input class="strategy-form-input list-group-item form-control form-control-lg" type="text" placeholder="$100.000">
-						<input class="strategy-form-input list-group-item form-control form-control-lg" type="text" placeholder="30 días">
-					</ul>
-				</div>
-			</form>
-
-			<!--  Estretegia sugerida  -->
-			<div class="home-list second-ranking-col container col-md-6 col-xl-5">
+			<div class="home-list container col-md-6 col-xl-5">
+				<h1>Filtrar inversiones</h1>
+				<h2>Moneda de inversión</h1>
 				<div class="card justify-content-center">
-					<ul class="list-group">
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">50%</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start">Dólares virtuales en Ripio</p>
-								<p class="p-2 asset-economics align-self-start">$50.000</p>		
+					<div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">Pesos</label>
+					</div>
+					<div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">Dólares</label>
+					</div>
+				</div>
+				<h2>Tipos de inversiones</h1>
+					<div class="card justify-content-center">
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Plazo fijo</label>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Rulos con dólares</label>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Cripto</label>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Fondos de inversión</label>
+						</div>
+					</div>
+					<h2>Entidades a mostrar</h1>
+						<div class="card justify-content-center">
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Billeteras</label>
 							</div>
-						</li>
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">30%</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start">Plazo Fijo en Supervielle</p>
-								<p class="p-2 asset-economics align-self-start">$30.000</p>		
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Cripto billeteras</label>
 							</div>
-						</li>
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">20%</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start">Fondo en Mercado Pago</p>
-								<p class="p-2 asset-economics align-self-start">$20.000</p>		
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Bancos tradicionales</label>
 							</div>
-						</li>
-						<li class="result list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">+36%</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start">Rendimiento anual</p>
-								<p class="p-2 asset-economics align-self-start">+$36.000</p>		
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Bancos digitales</label>
 							</div>
-						</li>
-					</ul>
+						</div>
+				<div class="card justify-content-center">
+					<a href="ranking.html" class="after-filters btn btn-primary btn-lg btn-block" role="button">Aplicar filtros
+					</a>
+					<a href="ranking.html" class="btn btn-outline-primary btn-lg btn-block" role="button">Cancelar
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<!-- Footer -->
-	<div class="container-fluid footer d-flex justify-content-between">
-		<div class="d-flex p-2 bd-highlight align-self-center">Juanma Gelay</div>
-		<div class="d-flex p-2 bd-highlight align-self-center social-media">
-			<a href="https://www.linkedin.com/in/juanmagelay">LinkedIn</a>  
-			|
-			<a href="mailto:juanmanuelgelay@gmail.com">Email</a>
-		</div>
-	</div>
-
 
 	<!--  Navbar  -->
-	<nav class="mobile-navbar d-sm-none navbar justify-content-between fixed-bottom navbar-expand navbar-light bg-light">
-		<div class="col">
-			<a class="navbar-brand" href="index.html">
-				<img class="CY-logo-reduced" src="Resources/CY-logo-reduced.svg">
-			</a>
-		</div>
-		<div class="col col-md-3 col-lg-2 col-xl-2">
-			<ul class="navbar-nav justify-content-end">
-				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Inversiones <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="index.html">Gastos</a>					
-				</li>	
-			</ul>
-		</div>
-	</nav>
 	<nav class="desktop-navbar d-none d-sm-inline-flex navbar justify-content-between fixed-top navbar-expand navbar-light bg-light">
 		<div class="col">
 			<a class="navbar-brand" href="index.html">
