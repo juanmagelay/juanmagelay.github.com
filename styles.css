@@ -15,6 +15,7 @@ h2 {
 	font-size: 18px;
 	color: #B43E8F;
 	margin-bottom: 25.5px;
+	margin-top: 25.5px;
 }
 
 .navbar {
@@ -193,12 +194,13 @@ h2 {
 
 	/* Filters */
 
-	.form-check {
-		
+	.after-filters {
+		margin-top: 50px;
 	}
 
-	.form-check-input {
-
+	.form-group {
+		font-size: 18px;
+		color: #3626A7;
 	}
 	
 /* SM - Tablet - 600px */
@@ -339,6 +341,16 @@ h2 {
 		margin-bottom: 20px;	
 	}
 
+		/* Filters */
+
+		.after-filters {
+			margin-top: 80px;
+		}
+	
+		.form-group {
+			font-size: 24px;
+			color: #3626A7;
+		}
 }
 
 /* XL - Desktop - 1440px */

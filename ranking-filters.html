@@ -29,28 +29,66 @@
 	<link rel="icon" type="image/png" href="Resources/favicon.png" />
 </head>
 <body>
-	<div class="home-list container col-md-6 col-xl-5">
-		<h1>Filtrar inversiones</h1>
-		<h2>Moneda de inversión</h1>
-		<div class="card justify-content-center">
-			<ul class="list-group">
-				<form class="home-list">
-					<div class="justify-content-center">
-						<ul class="list-group">
-							<div class="strategy-form-input list-group-item form-check">
-								<input class="form-check-input" type="checkbox" id="gridCheck">
-								<label class="form-check-label" for="gridCheck">
-									Pesos
-								</label>
-							</div>
-						</ul>
+	<div class="container">
+		<div class="row row-cols-1 row-cols-md-2">
+			<div class="home-list container col-md-6 col-xl-5">
+				<h1>Filtrar inversiones</h1>
+				<h2>Moneda de inversión</h1>
+				<div class="card justify-content-center">
+					<div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">Pesos</label>
 					</div>
-				</form>
-			</ul>
-			<a href="ranking.html" class="btn btn-primary btn-lg btn-block" role="button">Aplicar filtros
-			</a>
-			<a href="ranking.html" class="btn btn-primary btn-lg btn-block" role="button">Cancelar
-			</a>
+					<div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1">
+						<label class="form-check-label" for="exampleCheck1">Dólares</label>
+					</div>
+				</div>
+				<h2>Tipos de inversiones</h1>
+					<div class="card justify-content-center">
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Plazo fijo</label>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Rulos con dólares</label>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Cripto</label>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Fondos de inversión</label>
+						</div>
+					</div>
+					<h2>Entidades a mostrar</h1>
+						<div class="card justify-content-center">
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Billeteras</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Cripto billeteras</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Bancos tradicionales</label>
+							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Bancos digitales</label>
+							</div>
+						</div>
+				<div class="card justify-content-center">
+					<a href="ranking.html" class="after-filters btn btn-primary btn-lg btn-block" role="button">Aplicar filtros
+					</a>
+					<a href="ranking.html" class="btn btn-outline-primary btn-lg btn-block" role="button">Cancelar
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
