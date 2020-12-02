@@ -64,6 +64,7 @@ h2 {
 		color: #3626A7;
 		font-weight: bold;
 		height: 65.62px;
+		background-color: #FFFFFF;
 	}
 
 	@media (max-width: 320px) {
@@ -213,6 +214,10 @@ h2 {
 
 	/* Filters */
 
+	.filters-bg {
+		background-color: #FFFFFF;
+	}
+	
 	.after-filters {
 		margin-top: 50px;
 	}
@@ -243,7 +248,7 @@ h2 {
 	.desktop-navbar {
 		border-bottom: #3626A7 1px solid;
 		height: 99px;
-		background-color: #FFFFFF !important;
+		background-color: #FFFFFF;
 	}
 
 	.CY-logo-default {
