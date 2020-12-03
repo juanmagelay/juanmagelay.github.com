@@ -5,15 +5,18 @@ var blueDollar12m = 200;
 var blueDollarToday = 158;
 var oficialDollarToday = 87.00;
 
+
 //Object constructor function
 
-function InvestmentAsset(newAssettName, newAnnualYield, newEntityName, newEntityTipe, newInvestmentType, newAssetCurrency) {
-    this.assetName = newAssettName;
-    this.annualYield = newAnnualYield;
-    this.entityName = newEntityName;
-    this.entityType = newEntityTipe;
-    this.entityType.investmentType = newInvestmentType;
-    this.assetCurrency = newAssetCurrency;
+class InvestmentAsset {
+    constructor (newAssettName, newAnnualYield, newEntityName, newEntityTipe, newInvestmentType, newAssetCurrency) {
+        this.assetName = newAssettName;
+        this.annualYield = newAnnualYield;
+        this.entityName = newEntityName;
+        this.entityType = newEntityTipe;
+        this.investmentType = newInvestmentType;
+        this.assetCurrency = newAssetCurrency;
+    }
 }
 
 
@@ -35,6 +38,7 @@ console.log(compraDolarBlueHoyYVentaAlAno);
 console.log(compraDolarOficialHoyYVentaAlAno);
 
 console.log(plazoFijoTradicionalSupervielle.annualYield);
+
 
 //Sort of annualYields
 
@@ -71,5 +75,6 @@ function investmentAssetsRankingByAnuualYields() {
 }
 
 investmentAssetsRankingByAnuualYields();
+
 
 
