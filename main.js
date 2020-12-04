@@ -60,6 +60,7 @@ annualYieldRanking();
 
 
 //Sort of InvestmentAssets by AnnualYields
+
 let investmentAssets = [
     plazoFijoTradicionalSupervielle,
     plazoFijoUVASupervielle,
@@ -77,4 +78,11 @@ function investmentAssetsRankingByAnuualYields() {
 investmentAssetsRankingByAnuualYields();
 
 
+//Top 5 Investment Assets
+function investmentAssetstop5RankingByAnuualYields() {
+    const numberForRanking = 2; //get the first 5 items
+    let top5Ranking = investmentAssets.slice(0, numberForRanking);
+    console.table(top5Ranking);
+}
 
+investmentAssetstop5RankingByAnuualYields();
