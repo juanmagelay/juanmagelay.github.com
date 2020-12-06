@@ -27,10 +27,10 @@ let plazoFijoTradicionalSupervielle = new InvestmentAsset("Plazo fijo tradiciona
 let plazoFijoUVASupervielle = new InvestmentAsset("Plazo fijo UVA", 1+inflation12m, "Supervielle", "Bancos tradicionales", "Plazo fijo", "Pesos");
 
 // ( precio dolar en un ano - precio dolar hoy ) / precio dolar hoy
-let compraDolarBlueHoyYVentaAlAno = new InvestmentAsset("Rulo en dólares", ((blueDollar12m - blueDollarToday) / blueDollarToday) * 100, "Alguna", "Casa de cambio", "Rulos con dólares", "Dólares");
+let compraDolarBlueHoyYVentaAlAno = new InvestmentAsset("Rulo con dólar blue", ((blueDollar12m - blueDollarToday) / blueDollarToday) * 100, "Alguna", "Casas de cambio", "Rulos con dólares", "Dólares");
 
 // ( precio dolar en un ano - precio dolar hoy ) / precio dolar hoy
-let compraDolarOficialHoyYVentaAlAno = new InvestmentAsset("Rulo en dólares", ((blueDollar12m - oficialDollarToday) / oficialDollarToday) * 100, "Supervielle", "Bancos tradicionales", "Rulos con dólares", "Dólares");
+let compraDolarOficialHoyYVentaAlAno = new InvestmentAsset("Rulo con dólar oficial", ((blueDollar12m - oficialDollarToday) / oficialDollarToday) * 100, "Supervielle", "Bancos tradicionales", "Rulos con dólares", "Dólares");
 
 console.log(plazoFijoTradicionalSupervielle);
 console.log(plazoFijoUVASupervielle);
@@ -59,7 +59,7 @@ function annualYieldRanking() {
 annualYieldRanking();
 
 
-//Sort of InvestmentAssets by AnnualYields
+//Sort of InvestmentAssets by AnnualYields - AKA Top 10 Investment Assets
 
 let investmentAssets = [
     plazoFijoTradicionalSupervielle,
@@ -86,3 +86,88 @@ function investmentAssetstop5RankingByAnuualYields() {
 }
 
 investmentAssetstop5RankingByAnuualYields();
+
+
+//Filters - Investment assets in Dollars
+function showOnlyInvestmentAssetsInDollars() {
+    let onlyDollars = "Dólares";
+    let onlyInvestmentAssetsInDollars = [];
+    for (let investmentAsset of investmentAssets) {
+        for(let assetCurrency in investmentAsset){
+            if(investmentAsset[assetCurrency] == onlyDollars){
+                onlyInvestmentAssetsInDollars.push(investmentAsset);
+            }
+        }
+    }
+    console.table(onlyInvestmentAssetsInDollars);
+}
+
+showOnlyInvestmentAssetsInDollars();
+
+
+//Filters - Investment assets in Pesos
+function showOnlyInvestmentAssetsInPesos() {
+    let onlyPesos = "Pesos";
+    let onlyInvestmentAssetsInPesos = [];
+    for (let investmentAsset of investmentAssets) {
+        for(let assetCurrency in investmentAsset){
+            if(investmentAsset[assetCurrency] == onlyPesos){
+                onlyInvestmentAssetsInPesos.push(investmentAsset);
+            }
+        }
+    }
+    console.table(onlyInvestmentAssetsInPesos);
+}
+
+showOnlyInvestmentAssetsInPesos();
+
+
+//Filters - Investment asset Fixed term
+function showOnlyInvestmentAssetsFixedTerm() {
+    let onlyFixedTerm = "Plazo fijo";
+    let onlyInvestmentAssetsFixedTerm = [];
+    for (let investmentAsset of investmentAssets) {
+        for(let investmentType in investmentAsset){
+            if(investmentAsset[investmentType] == onlyFixedTerm){
+                onlyInvestmentAssetsFixedTerm.push(investmentAsset);
+            }
+        }
+    }
+    console.table(onlyInvestmentAssetsFixedTerm);
+}
+
+showOnlyInvestmentAssetsFixedTerm();
+
+
+//Filters - Investment asset Dollar loop
+function showOnlyInvestmentAssetsDollarLoop() {
+    let onlyDollarLoop = "Rulos con dólares";
+    let onlyInvestmentAssetsDollarLoop = [];
+    for (let investmentAsset of investmentAssets) {
+        for(let investmentType in investmentAsset){
+            if(investmentAsset[investmentType] == onlyDollarLoop){
+                onlyInvestmentAssetsDollarLoop.push(investmentAsset);
+            }
+        }
+    }
+    console.table(onlyInvestmentAssetsDollarLoop);
+}
+
+showOnlyInvestmentAssetsDollarLoop();
+
+
+//Filters - Investment asset from Exchange houses
+function showOnlyInvestmentAssetsFromExchangeHouses() {
+    let onlyFromExchangeHouses = "Casas de cambio";
+    let onlyInvestmentAssetsFromExchangeHouses = [];
+    for (let investmentAsset of investmentAssets) {
+        for(let entityType in investmentAsset){
+            if(investmentAsset[entityType] == onlyFromExchangeHouses){
+                onlyInvestmentAssetsFromExchangeHouses.push(investmentAsset);
+            }
+        }
+    }
+    console.table(onlyInvestmentAssetsFromExchangeHouses);
+}
+
+showOnlyInvestmentAssetsFromExchangeHouses();
