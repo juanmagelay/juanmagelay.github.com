@@ -1,3 +1,8 @@
+//Splash
+setTimeout( function() {
+    document.getElementById("splash").style.display = "none";
+}, 2000);
+
 //Global vars
 
 var inflation12m = 50;

@@ -3,6 +3,16 @@ body {
 	background-color: #DEFFF8;
 }
 
+#splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 105%;
+    background-color: #FFFFFF;
+    z-index: 2000;
+}
+
 h1 {
 	font-weight: bold;
 	font-size: 24px;
