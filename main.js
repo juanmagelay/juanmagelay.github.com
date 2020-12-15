@@ -180,5 +180,28 @@ function showOnlyInvestmentAssetsFromExchangeHouses() {
 showOnlyInvestmentAssetsFromExchangeHouses();
 
 
+//Mejores inversiones - Best investment assets - HTML Manipulate
+
+//AssetNames
+let investmentAssetName1 = investmentAssets[0].assetName;
+let bestInvestmentAssetName1 = document.getElementById("mejores-inversiones-1-asset-name").innerHTML = (investmentAssetName1);
+
+let investmentAssetName2 = investmentAssets[1].assetName;
+let bestInvestmentAssetName2 = document.getElementById("mejores-inversiones-2-asset-name").innerHTML = (investmentAssetName2);
+
+let investmentAssetName3 = investmentAssets[2].assetName;
+let bestInvestmentAssetName3 = document.getElementById("mejores-inversiones-3-asset-name").innerHTML = (investmentAssetName3);
+
+//AnnualYields
+let investmentAssetAnnualYield1 = investmentAssets[0].annualYield;
+let bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((investmentAssetAnnualYield1.toFixed(1))+"%");
+
+let investmentAssetAnnualYield2 = investmentAssets[1].annualYield;
+let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((investmentAssetAnnualYield2.toFixed(1))+"%");
+
+let investmentAssetAnnualYield3 = investmentAssets[2].annualYield;
+let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((investmentAssetAnnualYield3.toFixed(1))+"%");
+
+
 
 
