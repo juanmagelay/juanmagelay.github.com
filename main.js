@@ -5,10 +5,10 @@ setTimeout( function() {
 
 //Global vars
 
-var inflation12m = 50;
-var blueDollar12m = 200;
-var blueDollarToday = 158;
-var oficialDollarToday = 87.00;
+const inflation12m = 50;
+const blueDollar12m = 200;
+const blueDollarToday = 158;
+const oficialDollarToday = 87.00;
 
 
 //Object constructor function
