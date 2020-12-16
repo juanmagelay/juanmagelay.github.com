@@ -6,17 +6,22 @@ setTimeout( function() {
 
 //Global vars
 //JSON
-let globalVars = '{"inflation12m":12, "blueDollar12m":200, "blueDollarToday":158, "oficialDollarToday":87.00}';
+let globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}';
 //OBJECTS
-var inflation12m = JSON.parse(globalVars).inflation12m;
-var blueDollar12m = JSON.parse(globalVars).blueDollar12m;
-var blueDollarToday = JSON.parse(globalVars).blueDollarToday;
-var oficialDollarToday = JSON.parse(globalVars).oficialDollarToday;
+const inflation12m = JSON.parse(globalVars).inflation12m;
+const blueDollar12m = JSON.parse(globalVars).blueDollar12m;
+const blueDollarToday = JSON.parse(globalVars).blueDollarToday;
+const oficialDollarToday = JSON.parse(globalVars).oficialDollarToday;
+const oficialDollar12m = JSON.parse(globalVars).oficialDollar12m;
+const dollarTax = JSON.parse(globalVars).dollarTax;
+
 //TEST
 console.log(inflation12m);
 console.log(blueDollar12m);
 console.log(blueDollarToday);
 console.log(oficialDollarToday);
+console.log(oficialDollar12m);
+console.log(dollarTax);
 
 
 //Object constructor function
@@ -41,6 +46,30 @@ let plazoFijoTradicionalSupervielle = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
+let plazoFijoTradicionalBrubank = new InvestmentAsset(
+    "Plazo fijo tradicional", 
+    37, 
+    "Brubank", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
+let plazoFijoTradicionalReba = new InvestmentAsset(
+    "Plazo fijo tradicional", 
+    37, 
+    "Reba", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
+let plazoFijoTradicionalWilobank = new InvestmentAsset(
+    "Plazo fijo tradicional", 
+    37, 
+    "Wilobank", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
 let plazoFijoUVASupervielle = new InvestmentAsset(
     "Plazo fijo UVA", 
     1+inflation12m, 
@@ -49,23 +78,45 @@ let plazoFijoUVASupervielle = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-// ( precio dolar en un ano - precio dolar hoy ) / precio dolar hoy
-let compraDolarBlueHoyYVentaAlAno = new InvestmentAsset(
-    "Rulo con dólar blue", 
-    ((blueDollar12m - blueDollarToday) / blueDollarToday) * 100, 
+let fondoSupervielle = new InvestmentAsset(
+    "Fondo", 
+    38.3, 
+    "Supervielle", 
+    "Bancos tradicionales", 
+    "Fondo", 
+    "Pesos"
+);
+let fondoMercadoPago = new InvestmentAsset(
+    "Fondo", 
+    26.6, 
+    "Mercado Pago", 
+    "Billeteras", 
+    "Fondo", 
+    "Pesos"
+);
+let ruloConDolaresOficiales = new InvestmentAsset(
+    "Rulo con dólares oficiales", 
+    ((blueDollar12m / blueDollarToday) * blueDollarToday) / (88 * dollarTax), 
     "Alguna", 
     "Casas de cambio", 
     "Rulos con dólares", 
     "Dólares"
 );
-// ( precio dolar en un ano - precio dolar hoy ) / precio dolar hoy
-let compraDolarOficialHoyYVentaAlAno = new InvestmentAsset(
-    "Rulo con dólar oficial", 
-    ((blueDollar12m - oficialDollarToday) / oficialDollarToday) * 100, 
+let compraDeDolaresOficiales = new InvestmentAsset(
+    "Compra de dólares oficiales", 
+    oficialDollar12m / (88 * dollarTax), 
     "Supervielle", 
     "Bancos tradicionales", 
     "Rulos con dólares", 
     "Dólares"
+);
+let compraDeUsdc = new InvestmentAsset(
+    "Compra de dólares virtuales", 
+    1.4, 
+    "Ripio", 
+    "Cripto billeteras", 
+    "Cripto monedas", 
+    "Pesos"
 );
 //TEST
 console.log(plazoFijoTradicionalSupervielle);
@@ -76,9 +127,15 @@ console.log(plazoFijoTradicionalSupervielle.annualYield);
 //Sort of annualYields
 let annualYields = [
     plazoFijoTradicionalSupervielle.annualYield, 
+    plazoFijoTradicionalBrubank.annualYield,
+    plazoFijoTradicionalReba.annualYield,
+    plazoFijoTradicionalWilobank.annualYield,
     plazoFijoUVASupervielle.annualYield, 
-    compraDolarBlueHoyYVentaAlAno.annualYield, 
-    compraDolarOficialHoyYVentaAlAno.annualYield
+    fondoSupervielle.annualYield, 
+    fondoMercadoPago.annualYield,
+    ruloConDolaresOficiales.annualYield,
+    compraDeDolaresOficiales.annualYield,
+    compraDeUsdc.annualYield
 ];
 
 function annualYieldRanking() {
@@ -93,10 +150,16 @@ annualYieldRanking();
 
 //Sort of InvestmentAssets by AnnualYields - AKA Top 10 Investment Assets
 let investmentAssets = [
-    plazoFijoTradicionalSupervielle,
-    plazoFijoUVASupervielle,
-    compraDolarBlueHoyYVentaAlAno,
-    compraDolarOficialHoyYVentaAlAno 
+    plazoFijoTradicionalSupervielle, 
+    plazoFijoTradicionalBrubank,
+    plazoFijoTradicionalReba,
+    plazoFijoTradicionalWilobank,
+    plazoFijoUVASupervielle, 
+    fondoSupervielle, 
+    fondoMercadoPago,
+    ruloConDolaresOficiales,
+    compraDeDolaresOficiales,
+    compraDeUsdc
 ];
 
 function investmentAssetsRankingByAnuualYields() {
