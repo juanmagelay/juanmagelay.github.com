@@ -209,27 +209,55 @@ showOnlyInvestmentAssetsFromExchangeHouses();
 
 
 //Mejores inversiones - Best investment assets - HTML Manipulate
-
 //AssetNames
+//1
 let investmentAssetName1 = investmentAssets[0].assetName;
 let bestInvestmentAssetName1 = document.getElementById("mejores-inversiones-1-asset-name").innerHTML = (investmentAssetName1);
-
+//2
 let investmentAssetName2 = investmentAssets[1].assetName;
 let bestInvestmentAssetName2 = document.getElementById("mejores-inversiones-2-asset-name").innerHTML = (investmentAssetName2);
-
+//3
 let investmentAssetName3 = investmentAssets[2].assetName;
 let bestInvestmentAssetName3 = document.getElementById("mejores-inversiones-3-asset-name").innerHTML = (investmentAssetName3);
-
 //AnnualYields
+//1
 let investmentAssetAnnualYield1 = investmentAssets[0].annualYield;
 let bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((investmentAssetAnnualYield1.toFixed(1))+"%");
-
+//2
 let investmentAssetAnnualYield2 = investmentAssets[1].annualYield;
 let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((investmentAssetAnnualYield2.toFixed(1))+"%");
-
+//3
 let investmentAssetAnnualYield3 = investmentAssets[2].annualYield;
 let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((investmentAssetAnnualYield3.toFixed(1))+"%");
 
 
+//Estrategia sugerida para invertir - Suggested strategy for invest - HTML Manipulate
+//Three elements to invest
+//PercentajeOfInvestment
+//1
+let suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("estrategia-sugerida-1-percentaje-of-investment").innerHTML = (25+"%");
+//2
+let suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("estrategia-sugerida-2-percentaje-of-investment").innerHTML = (28+"%");
+//3
+let suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("estrategia-sugerida-3-percentaje-of-investment").innerHTML = (47+"%");
+//AssetNames
+//1
+let suggestedInvestmentAssetName1 = document.getElementById("estrategia-sugerida-1-asset-name").innerHTML = ("Fondo en Mercado Pago");
+//2
+let suggestedInvestmentAssetName2 = document.getElementById("estrategia-sugerida-2-asset-name").innerHTML = (investmentAssetName1);
+//3
+let suggestedInvestmentAssetName3 = document.getElementById("estrategia-sugerida-3-asset-name").innerHTML = (investmentAssetName2);
+//TotalMoney
+//1
+let suggestedInvestmentTotalMoney1 = document.getElementById("estrategia-sugerida-1-total-money").innerHTML = ("$25.000");
+//2
+let suggestedInvestmentTotalMoney2 = document.getElementById("estrategia-sugerida-2-total-money").innerHTML = ("$28.000");
+//3
+let suggestedInvestmentTotalMoney3 = document.getElementById("estrategia-sugerida-3-total-money").innerHTML = ("$47.000");
+//Total Annual Yield
+//TotalAnnualYield
+let totalAnnualYield = document.getElementById("estrategia-sugerida-total-annual-yield").innerHTML = ("+29%");
+//TotalAnnualMoney
+let totalAnnualMoney = document.getElementById("estrategia-sugerida-total-annual-money").innerHTML = ("+$29.000");
 
 
