@@ -345,16 +345,21 @@ document.getElementById("view-all-button").onmouseover = console.log("Want to vi
 
 //Strategy amount and days TO FIX
 //Get values
-let strategyAmount = document.getElementById("strategy-amount").onkeypress = getAmountValue;
-let strategyDays = document.getElementById("strategy-days").onkeypress = getDaysValue;
+let strategyAmount = document.getElementById("strategy-amount").onchange = getAmountValue;
+let strategyDays = document.getElementById("strategy-days").onchange = getDaysValue;
+
+
 //TEST
 function getAmountValue() {
-  console.log(this.value);
+  let amountValue = document.getElementById("strategy-amount").value;
+  console.log(amountValue);
 }
+
 function getDaysValue() {
     console.log(this.value);
 }
 
-document.getElementById("form-amount-and-days").onfocus = console.log("Clicked");
-document.getElementById("strategy-amount").onfocus = console.log("Clicked");
 
+
+document.getElementById("form-amount-and-days").onclick = console.log("Clicked");
+document.getElementById("strategy-amount").onclick = console.log("Clicked");
