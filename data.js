@@ -39,7 +39,7 @@ class InvestmentAsset {
 
 //Investment Assets new Objects
 let plazoFijoTradicionalSupervielle = new InvestmentAsset(
-    "Plazo fijo", 
+    "Plazo fijo tradicional", 
     37, 
     "Supervielle", 
     "Bancos tradicionales", 
@@ -47,7 +47,7 @@ let plazoFijoTradicionalSupervielle = new InvestmentAsset(
     "Pesos"
 );
 let plazoFijoTradicionalBrubank = new InvestmentAsset(
-    "Plazo fijo", 
+    "Plazo fijo tradicional", 
     37, 
     "Brubank", 
     "Bancos tradicionales", 
@@ -55,7 +55,7 @@ let plazoFijoTradicionalBrubank = new InvestmentAsset(
     "Pesos"
 );
 let plazoFijoTradicionalReba = new InvestmentAsset(
-    "Plazo fijo", 
+    "Plazo fijo tradicional", 
     37, 
     "Reba", 
     "Bancos tradicionales", 
@@ -63,7 +63,7 @@ let plazoFijoTradicionalReba = new InvestmentAsset(
     "Pesos"
 );
 let plazoFijoTradicionalWilobank = new InvestmentAsset(
-    "Plazo fijo", 
+    "Plazo fijo tradicional", 
     37, 
     "Wilobank", 
     "Bancos tradicionales", 
@@ -95,7 +95,7 @@ let fondoMercadoPago = new InvestmentAsset(
     "Pesos"
 );
 let ruloConDolaresOficiales = new InvestmentAsset(
-    "Rulo dólares oficiales", 
+    "Rulo con dólares oficiales", 
     ((blueDollar12m / blueDollarToday) * blueDollarToday) / (88 * dollarTax), 
     "Alguna", 
     "Casas de cambio", 
@@ -103,7 +103,7 @@ let ruloConDolaresOficiales = new InvestmentAsset(
     "Dólares"
 );
 let compraDeDolaresOficiales = new InvestmentAsset(
-    "Dólares oficiales", 
+    "Compra de dólares oficiales", 
     oficialDollar12m / (88 * dollarTax), 
     "Supervielle", 
     "Bancos tradicionales", 
@@ -111,7 +111,7 @@ let compraDeDolaresOficiales = new InvestmentAsset(
     "Dólares"
 );
 let compraDeUsdc = new InvestmentAsset(
-    "Dólares virtuales", 
+    "Compra de dólares virtuales", 
     1.4, 
     "Ripio", 
     "Cripto billeteras", 
@@ -272,19 +272,16 @@ showOnlyInvestmentAssetsFromExchangeHouses();
 
 
 //Mejores inversiones - Best investment assets - HTML Manipulate
-//AssetNames and EntityNames
+//AssetNames
 //1
 let investmentAssetName1 = investmentAssets[0].assetName;
-let investmentEntityName1 = investmentAssets[0].entityName;
-let bestInvestmentAssetName1 = document.getElementById("mejores-inversiones-1-asset-name").innerHTML = (investmentAssetName1 + " " + investmentEntityName1);
+let bestInvestmentAssetName1 = document.getElementById("mejores-inversiones-1-asset-name").innerHTML = (investmentAssetName1);
 //2
 let investmentAssetName2 = investmentAssets[1].assetName;
-let investmentEntityName2 = investmentAssets[1].entityName;
-let bestInvestmentAssetName2 = document.getElementById("mejores-inversiones-2-asset-name").innerHTML = (investmentAssetName2 + " " + investmentEntityName2);
+let bestInvestmentAssetName2 = document.getElementById("mejores-inversiones-2-asset-name").innerHTML = (investmentAssetName2);
 //3
 let investmentAssetName3 = investmentAssets[2].assetName;
-let investmentEntityName3 = investmentAssets[2].entityName;
-let bestInvestmentAssetName3 = document.getElementById("mejores-inversiones-3-asset-name").innerHTML = (investmentAssetName3 + " " + investmentEntityName3);
+let bestInvestmentAssetName3 = document.getElementById("mejores-inversiones-3-asset-name").innerHTML = (investmentAssetName3);
 //AnnualYields
 //1
 let investmentAssetAnnualYield1 = investmentAssets[0].annualYield;
@@ -308,37 +305,23 @@ let suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("estrat
 let suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("estrategia-sugerida-3-percentaje-of-investment").innerHTML = (47+"%");
 //AssetNames
 //1
-let suggestedInvestmentAssetName1 = document.getElementById("estrategia-sugerida-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName);
+let suggestedInvestmentAssetName1 = document.getElementById("estrategia-sugerida-1-asset-name").innerHTML = ("Fondo en Mercado Pago");
 //2
-let suggestedInvestmentAssetName2 = document.getElementById("estrategia-sugerida-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName);
+let suggestedInvestmentAssetName2 = document.getElementById("estrategia-sugerida-2-asset-name").innerHTML = (investmentAssetName1);
 //3
-let suggestedInvestmentAssetName3 = document.getElementById("estrategia-sugerida-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName);
+let suggestedInvestmentAssetName3 = document.getElementById("estrategia-sugerida-3-asset-name").innerHTML = (investmentAssetName2);
 //TotalMoney
 //1
-let suggestedInvestmentTotalMoney1 = document.getElementById("estrategia-sugerida-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000))));
+let suggestedInvestmentTotalMoney1 = document.getElementById("estrategia-sugerida-1-total-money").innerHTML = ("$25.000");
 //2
-let suggestedInvestmentTotalMoney2 = document.getElementById("estrategia-sugerida-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000))));
+let suggestedInvestmentTotalMoney2 = document.getElementById("estrategia-sugerida-2-total-money").innerHTML = ("$28.000");
 //3
-let suggestedInvestmentTotalMoney3 = document.getElementById("estrategia-sugerida-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000))));
+let suggestedInvestmentTotalMoney3 = document.getElementById("estrategia-sugerida-3-total-money").innerHTML = ("$47.000");
 //Total Annual Yield
 //TotalAnnualYield
-let totalAnnualYield = document.getElementById("estrategia-sugerida-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
+let totalAnnualYield = document.getElementById("estrategia-sugerida-total-annual-yield").innerHTML = ("+29%");
 //TotalAnnualMoney
-let totalAnnualMoney = document.getElementById("estrategia-sugerida-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated()))));
-
-function thousandsSeparatorsForMoney(anAmountOfMoney) {
-    var numParts = anAmountOfMoney.toString().split(".");
-    numParts[0] = numParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    return numParts.join(".");
-}
-
-function annualYieldCalculated() {
-    return ((0.25 * 26.6) + (0.28 * 53.5) + (0.47 * 38.3))
-}
-
-function totalMoneyCalculated() {
-    return (annualYieldCalculated() * 1000)
-}
+let totalAnnualMoney = document.getElementById("estrategia-sugerida-total-annual-money").innerHTML = ("+$29.000");
 
 //Home events
 document.getElementById("view-all-button").onmouseover = console.log("Want to view all investment assets.");
@@ -357,4 +340,3 @@ function getDaysValue() {
 
 document.getElementById("form-amount-and-days").onfocus = console.log("Clicked");
 document.getElementById("strategy-amount").onfocus = console.log("Clicked");
-
