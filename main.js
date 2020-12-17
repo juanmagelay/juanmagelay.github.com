@@ -323,7 +323,8 @@ let totalAnnualYield = document.getElementById("estrategia-sugerida-total-annual
 //TotalAnnualMoney
 let totalAnnualMoney = document.getElementById("estrategia-sugerida-total-annual-money").innerHTML = ("+$29.000");
 
-
+//Home events
+document.getElementById("view-all-button").onmouseover = console.log("Want to view all investment assets.");
 
 //Strategy amount and days TO FIX
 //Get values
