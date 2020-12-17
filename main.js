@@ -337,4 +337,5 @@ function getDaysValue() {
     console.log(this.value);
 }
 
-document.getElementById("strategy-amount").onclick = console.log("Clicked");
+document.getElementById("form-amount-and-days").onfocus = console.log("Clicked");
+document.getElementById("strategy-amount").onfocus = console.log("Clicked");
