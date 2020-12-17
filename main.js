@@ -324,3 +324,17 @@ let totalAnnualYield = document.getElementById("estrategia-sugerida-total-annual
 let totalAnnualMoney = document.getElementById("estrategia-sugerida-total-annual-money").innerHTML = ("+$29.000");
 
 
+
+//Strategy amount and days TO FIX
+//Get values
+let strategyAmount = document.getElementById("strategy-amount").onkeypress = getAmountValue;
+let strategyDays = document.getElementById("strategy-days").onkeypress = getDaysValue;
+//TEST
+function getAmountValue() {
+  console.log(this.value);
+}
+function getDaysValue() {
+    console.log(this.value);
+}
+
+document.getElementById("strategy-amount").onclick = console.log("Clicked");
