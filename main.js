@@ -6,7 +6,7 @@ setTimeout( function() {
 
 //Global vars
 //JSON
-let globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}';
+let globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}'; //MANUAL
 //OBJECTS
 const inflation12m = JSON.parse(globalVars).inflation12m;
 const blueDollar12m = JSON.parse(globalVars).blueDollar12m;
@@ -38,7 +38,7 @@ class InvestmentAsset {
 
 
 //Investment Assets new Objects
-let plazoFijoTradicionalSupervielle = new InvestmentAsset(
+let plazoFijoTradicionalSupervielle = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Supervielle", 
@@ -46,7 +46,7 @@ let plazoFijoTradicionalSupervielle = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoTradicionalBrubank = new InvestmentAsset(
+let plazoFijoTradicionalBrubank = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Brubank", 
@@ -54,7 +54,7 @@ let plazoFijoTradicionalBrubank = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoTradicionalReba = new InvestmentAsset(
+let plazoFijoTradicionalReba = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Reba", 
@@ -62,7 +62,7 @@ let plazoFijoTradicionalReba = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoTradicionalWilobank = new InvestmentAsset(
+let plazoFijoTradicionalWilobank = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Wilobank", 
@@ -70,7 +70,7 @@ let plazoFijoTradicionalWilobank = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoUVASupervielle = new InvestmentAsset(
+let plazoFijoUVASupervielle = new InvestmentAsset( //MANUAL
     "Plazo fijo UVA", 
     1+inflation12m, 
     "Supervielle", 
@@ -78,7 +78,7 @@ let plazoFijoUVASupervielle = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let fondoSupervielle = new InvestmentAsset(
+let fondoSupervielle = new InvestmentAsset( //MANUAL
     "Fondo", 
     38.3, 
     "Supervielle", 
@@ -86,7 +86,7 @@ let fondoSupervielle = new InvestmentAsset(
     "Fondo", 
     "Pesos"
 );
-let fondoMercadoPago = new InvestmentAsset(
+let fondoMercadoPago = new InvestmentAsset( //MANUAL
     "Fondo", 
     26.6, 
     "Mercado Pago", 
@@ -94,7 +94,7 @@ let fondoMercadoPago = new InvestmentAsset(
     "Fondo", 
     "Pesos"
 );
-let ruloConDolaresOficiales = new InvestmentAsset(
+let ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
     "Rulo dólares oficiales", 
     ((blueDollar12m / blueDollarToday) * blueDollarToday) / (88 * dollarTax), 
     "Alguna", 
@@ -102,7 +102,7 @@ let ruloConDolaresOficiales = new InvestmentAsset(
     "Rulos con dólares", 
     "Dólares"
 );
-let compraDeDolaresOficiales = new InvestmentAsset(
+let compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
     "Dólares oficiales", 
     oficialDollar12m / (88 * dollarTax), 
     "Supervielle", 
@@ -110,7 +110,7 @@ let compraDeDolaresOficiales = new InvestmentAsset(
     "Rulos con dólares", 
     "Dólares"
 );
-let compraDeUsdc = new InvestmentAsset(
+let compraDeUsdc = new InvestmentAsset( //MANUAL
     "Dólares virtuales", 
     1.4, 
     "Ripio", 
@@ -174,7 +174,7 @@ investmentAssetsRankingByAnuualYields();
 
 //Top 5 Investment Assets
 function investmentAssetstop5RankingByAnuualYields() {
-    const numberForRanking = 2; //get the first 5 items
+    const numberForRanking = 5; //get the first 5 items
     let top5Ranking = investmentAssets.slice(0, numberForRanking);
     console.table(top5Ranking);
 }
@@ -308,18 +308,18 @@ let suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strate
 let suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (47+"%");
 //AssetNames
 //1
-let suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName);
+let suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
 //2
-let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName);
+let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
 //3
-let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName);
+let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
 //TotalMoney
 //1
-let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000))));
+let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
 //2
-let suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000))));
+let suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000)))); //MANUAL
 //3
-let suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000))));
+let suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000)))); //MANUAL
 //Total Annual Yield
 //TotalAnnualYield
 let totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
@@ -333,7 +333,11 @@ function thousandsSeparatorsForMoney(anAmountOfMoney) {
 }
 
 function annualYieldCalculated() {
-    return ((0.25 * 26.6) + (0.28 * 53.5) + (0.47 * 38.3))
+    return (
+        (0.25 * fondoMercadoPago.annualYield) + //MANUAL
+        (0.28 * plazoFijoUVASupervielle.annualYield) + //MANUAL
+        (0.47 * fondoSupervielle.annualYield) //MANUAL
+    ) 
 }
 
 function totalMoneyCalculated() {
@@ -341,13 +345,13 @@ function totalMoneyCalculated() {
 }
 
 //Home events
-document.getElementById("strategy-suggested-1-percentage-of-investment").onclick = logTheInterestInMercadoPago;
+document.getElementById("strategy-suggested-1-percentage-of-investment").onclick = logTheInterestInMercadoPago; //MANUAL
 
 function logTheInterestInSupervielle() {
     console.log("Interested in Supervielle");
 }
 
-document.getElementById("interested-in-supervielle").addEventListener("click", logTheInterestInSupervielle);
+document.getElementById("interested-in-supervielle").addEventListener("click", logTheInterestInSupervielle); //MANUAL
 
 function logTheInterestInMercadoPago() {
     console.log("Interested in Mercado Pago");
