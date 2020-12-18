@@ -1,9 +1,3 @@
-//Splash
-setTimeout( function() {
-    document.getElementById("splash").style.display = "none";
-}, 2000);
-
-
 //Global vars
 //JSON
 let globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}';
@@ -340,14 +334,26 @@ function totalMoneyCalculated() {
     return (annualYieldCalculated() * 1000)
 }
 
-//Home events TO FIX
-document.getElementById("estrategia-sugerida-1-percentaje-of-investment").onclick = logTheInterestInMercadoPago;
-document.getElementById("interested-in-supervielle").addEventListener("click", logTheInterestInSupervielle);
+//Home events
+document.getElementById("view-all-button").onmouseover = console.log("Want to view all investment assets.");
 
-function logTheInterestInSupervielle() {
-    console.log("Interested in Supervielle");
+//Strategy amount and days TO FIX
+//Get values
+let strategyAmount = document.getElementById("strategy-amount").onchange = getAmountValue;
+let strategyDays = document.getElementById("strategy-days").onchange = getDaysValue;
+
+
+//TEST
+function getAmountValue() {
+  let amountValue = document.getElementById("strategy-amount").value;
+  console.log(amountValue);
 }
 
-function logTheInterestInMercadoPago() {
-    console.log("Interested in Mercado Pago");
+function getDaysValue() {
+    console.log(this.value);
 }
+
+
+
+document.getElementById("form-amount-and-days").onclick = console.log("Clicked");
+document.getElementById("strategy-amount").onclick = console.log("Clicked");
