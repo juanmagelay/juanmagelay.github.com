@@ -1,6 +1,7 @@
+
 //Global vars
 //JSON
-let globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}';
+let globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}'; //MANUAL
 //OBJECTS
 const inflation12m = JSON.parse(globalVars).inflation12m;
 const blueDollar12m = JSON.parse(globalVars).blueDollar12m;
@@ -32,7 +33,7 @@ class InvestmentAsset {
 
 
 //Investment Assets new Objects
-let plazoFijoTradicionalSupervielle = new InvestmentAsset(
+let plazoFijoTradicionalSupervielle = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Supervielle", 
@@ -40,7 +41,7 @@ let plazoFijoTradicionalSupervielle = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoTradicionalBrubank = new InvestmentAsset(
+let plazoFijoTradicionalBrubank = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Brubank", 
@@ -48,7 +49,7 @@ let plazoFijoTradicionalBrubank = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoTradicionalReba = new InvestmentAsset(
+let plazoFijoTradicionalReba = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Reba", 
@@ -56,7 +57,7 @@ let plazoFijoTradicionalReba = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoTradicionalWilobank = new InvestmentAsset(
+let plazoFijoTradicionalWilobank = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Wilobank", 
@@ -64,7 +65,7 @@ let plazoFijoTradicionalWilobank = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let plazoFijoUVASupervielle = new InvestmentAsset(
+let plazoFijoUVASupervielle = new InvestmentAsset( //MANUAL
     "Plazo fijo UVA", 
     1+inflation12m, 
     "Supervielle", 
@@ -72,7 +73,7 @@ let plazoFijoUVASupervielle = new InvestmentAsset(
     "Plazo fijo", 
     "Pesos"
 );
-let fondoSupervielle = new InvestmentAsset(
+let fondoSupervielle = new InvestmentAsset( //MANUAL
     "Fondo", 
     38.3, 
     "Supervielle", 
@@ -80,7 +81,7 @@ let fondoSupervielle = new InvestmentAsset(
     "Fondo", 
     "Pesos"
 );
-let fondoMercadoPago = new InvestmentAsset(
+let fondoMercadoPago = new InvestmentAsset( //MANUAL
     "Fondo", 
     26.6, 
     "Mercado Pago", 
@@ -88,7 +89,7 @@ let fondoMercadoPago = new InvestmentAsset(
     "Fondo", 
     "Pesos"
 );
-let ruloConDolaresOficiales = new InvestmentAsset(
+let ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
     "Rulo dólares oficiales", 
     ((blueDollar12m / blueDollarToday) * blueDollarToday) / (88 * dollarTax), 
     "Alguna", 
@@ -96,7 +97,7 @@ let ruloConDolaresOficiales = new InvestmentAsset(
     "Rulos con dólares", 
     "Dólares"
 );
-let compraDeDolaresOficiales = new InvestmentAsset(
+let compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
     "Dólares oficiales", 
     oficialDollar12m / (88 * dollarTax), 
     "Supervielle", 
@@ -104,7 +105,7 @@ let compraDeDolaresOficiales = new InvestmentAsset(
     "Rulos con dólares", 
     "Dólares"
 );
-let compraDeUsdc = new InvestmentAsset(
+let compraDeUsdc = new InvestmentAsset( //MANUAL
     "Dólares virtuales", 
     1.4, 
     "Ripio", 
@@ -168,7 +169,7 @@ investmentAssetsRankingByAnuualYields();
 
 //Top 5 Investment Assets
 function investmentAssetstop5RankingByAnuualYields() {
-    const numberForRanking = 2; //get the first 5 items
+    const numberForRanking = 5; //get the first 5 items
     let top5Ranking = investmentAssets.slice(0, numberForRanking);
     console.table(top5Ranking);
 }
@@ -264,3 +265,77 @@ function showOnlyInvestmentAssetsFromExchangeHouses() {
 
 showOnlyInvestmentAssetsFromExchangeHouses();
 
+
+//Mejores inversiones - Best investment assets - HTML Manipulate
+//AssetNames and EntityNames
+//1
+let investmentAssetName1 = investmentAssets[0].assetName;
+let investmentEntityName1 = investmentAssets[0].entityName;
+let bestInvestmentAssetName1 = document.getElementById("mejores-inversiones-1-asset-name").innerHTML = (investmentAssetName1 + " " + investmentEntityName1);
+//2
+let investmentAssetName2 = investmentAssets[1].assetName;
+let investmentEntityName2 = investmentAssets[1].entityName;
+let bestInvestmentAssetName2 = document.getElementById("mejores-inversiones-2-asset-name").innerHTML = (investmentAssetName2 + " " + investmentEntityName2);
+//3
+let investmentAssetName3 = investmentAssets[2].assetName;
+let investmentEntityName3 = investmentAssets[2].entityName;
+let bestInvestmentAssetName3 = document.getElementById("mejores-inversiones-3-asset-name").innerHTML = (investmentAssetName3 + " " + investmentEntityName3);
+//4
+let investmentAssetName4 = investmentAssets[3].assetName;
+let investmentEntityName4 = investmentAssets[3].entityName;
+let bestInvestmentAssetName4 = document.getElementById("mejores-inversiones-4-asset-name").innerHTML = (investmentAssetName4 + " " + investmentEntityName4);
+//5
+let investmentAssetName5 = investmentAssets[4].assetName;
+let investmentEntityName5 = investmentAssets[4].entityName;
+let bestInvestmentAssetName5 = document.getElementById("mejores-inversiones-5-asset-name").innerHTML = (investmentAssetName5 + " " + investmentEntityName5);
+//6
+let investmentAssetName6 = investmentAssets[5].assetName;
+let investmentEntityName6 = investmentAssets[5].entityName;
+let bestInvestmentAssetName6 = document.getElementById("mejores-inversiones-6-asset-name").innerHTML = (investmentAssetName6 + " " + investmentEntityName6);
+//7
+let investmentAssetName7 = investmentAssets[6].assetName;
+let investmentEntityName7 = investmentAssets[6].entityName;
+let bestInvestmentAssetName7 = document.getElementById("mejores-inversiones-7-asset-name").innerHTML = (investmentAssetName7 + " " + investmentEntityName7);
+//8
+let investmentAssetName8 = investmentAssets[7].assetName;
+let investmentEntityName8 = investmentAssets[7].entityName;
+let bestInvestmentAssetName8 = document.getElementById("mejores-inversiones-8-asset-name").innerHTML = (investmentAssetName8 + " " + investmentEntityName8);
+//9
+let investmentAssetName9 = investmentAssets[8].assetName;
+let investmentEntityName9 = investmentAssets[8].entityName;
+let bestInvestmentAssetName9 = document.getElementById("mejores-inversiones-9-asset-name").innerHTML = (investmentAssetName9 + " " + investmentEntityName9);
+//10
+let investmentAssetName10 = investmentAssets[9].assetName;
+let investmentEntityName10 = investmentAssets[9].entityName;
+let bestInvestmentAssetName10 = document.getElementById("mejores-inversiones-10-asset-name").innerHTML = (investmentAssetName10 + " " + investmentEntityName10);
+//AnnualYields
+//1
+let investmentAssetAnnualYield1 = investmentAssets[0].annualYield;
+let bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((investmentAssetAnnualYield1.toFixed(1))+"%");
+//2
+let investmentAssetAnnualYield2 = investmentAssets[1].annualYield;
+let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((investmentAssetAnnualYield2.toFixed(1))+"%");
+//3
+let investmentAssetAnnualYield3 = investmentAssets[2].annualYield;
+let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((investmentAssetAnnualYield3.toFixed(1))+"%");
+//4
+let investmentAssetAnnualYield4 = investmentAssets[3].annualYield;
+let bestInvestmentAssetAnnualYield4 = document.getElementById("mejores-inversiones-4-annual-yield").innerHTML = ((investmentAssetAnnualYield4.toFixed(1))+"%");
+//5
+let investmentAssetAnnualYield5 = investmentAssets[4].annualYield;
+let bestInvestmentAssetAnnualYield5 = document.getElementById("mejores-inversiones-5-annual-yield").innerHTML = ((investmentAssetAnnualYield5.toFixed(1))+"%");
+//6
+let investmentAssetAnnualYield6 = investmentAssets[5].annualYield;
+let bestInvestmentAssetAnnualYield6 = document.getElementById("mejores-inversiones-6-annual-yield").innerHTML = ((investmentAssetAnnualYield6.toFixed(1))+"%");
+//7
+let investmentAssetAnnualYield7 = investmentAssets[6].annualYield;
+let bestInvestmentAssetAnnualYield7 = document.getElementById("mejores-inversiones-7-annual-yield").innerHTML = ((investmentAssetAnnualYield7.toFixed(1))+"%");
+//8
+let investmentAssetAnnualYield8 = investmentAssets[7].annualYield;
+let bestInvestmentAssetAnnualYield8 = document.getElementById("mejores-inversiones-8-annual-yield").innerHTML = ((investmentAssetAnnualYield8.toFixed(1))+"%");
+//9
+let investmentAssetAnnualYield9 = investmentAssets[8].annualYield;
+let bestInvestmentAssetAnnualYield9 = document.getElementById("mejores-inversiones-9-annual-yield").innerHTML = ((investmentAssetAnnualYield9.toFixed(1))+"%");
+//2
+let investmentAssetAnnualYield10 = investmentAssets[9].annualYield;
+let bestInvestmentAssetAnnualYield10 = document.getElementById("mejores-inversiones-10-annual-yield").innerHTML = ((investmentAssetAnnualYield10.toFixed(1))+"%");
