@@ -264,23 +264,78 @@ function showOnlyInvestmentAssetsFromExchangeHouses() {
 
 showOnlyInvestmentAssetsFromExchangeHouses();
 
-//Strategy amount and days TO FIX
-//Get values
-let strategyAmount = document.getElementById("strategy-amount").onkeyup = getAmountValue;
 
-function getAmountValue() {
+//Estrategia sugerida para invertir - Suggested strategy for invest - HTML Manipulate
+//Three elements to invest
+//PercentajeOfInvestment
+//1
+let suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
+//2
+let suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (28+"%");
+//3
+let suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (47+"%");
+//AssetNames
+//1
+let suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
+//2
+let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
+//3
+let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
+//TotalMoney
+//1
+let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
+//2
+let suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000)))); //MANUAL
+//3
+let suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000)))); //MANUAL
+//Total Annual Yield
+//TotalAnnualYield
+let totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
+//TotalAnnualMoney
+let totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated()))));
+
+function thousandsSeparatorsForMoney(anAmountOfMoney) {
+    var numParts = anAmountOfMoney.toString().split(".");
+    numParts[0] = numParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return numParts.join(".");
+}
+
+function annualYieldCalculated() {
+    return (
+        (0.25 * fondoMercadoPago.annualYield) + //MANUAL
+        (0.28 * plazoFijoUVASupervielle.annualYield) + //MANUAL
+        (0.47 * fondoSupervielle.annualYield) //MANUAL
+    ) 
+}
+
+function totalMoneyCalculated() {
+    return (annualYieldCalculated() * 1000)
+}
+
+
+
+
+
+//Strategy amount and days form
+//Get values
+let strategyAmount = document.getElementById("strategy-amount").onkeyup = amountValue;
+
+function amountValue() {
     let amountValue = document.getElementById("strategy-amount").value;
     console.log(amountValue);
 }
 
-let strategyDays = document.getElementById("strategy-days").onkeyup = getDaysValue;
+let strategyDays = document.getElementById("strategy-days").onkeyup = daysValue;
 
-function getDaysValue() {
+function daysValue() {
     console.log(this.value);
 }
+
 //Get clicks on form
 document.getElementById("strategy-amount").onclick = logTheInterestInChange;
+document.getElementById("strategy-days").onclick = logTheInterestInChange;
 
 function logTheInterestInChange() {
     console.log("Interested in change");
 }
+
