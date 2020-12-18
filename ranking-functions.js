@@ -311,31 +311,37 @@ let bestInvestmentAssetName10 = document.getElementById("mejores-inversiones-10-
 //AnnualYields
 //1
 let investmentAssetAnnualYield1 = investmentAssets[0].annualYield;
-let bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((investmentAssetAnnualYield1.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield1))+"%");
 //2
 let investmentAssetAnnualYield2 = investmentAssets[1].annualYield;
-let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((investmentAssetAnnualYield2.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield2))+"%");
 //3
 let investmentAssetAnnualYield3 = investmentAssets[2].annualYield;
-let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((investmentAssetAnnualYield3.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield3))+"%");
 //4
 let investmentAssetAnnualYield4 = investmentAssets[3].annualYield;
-let bestInvestmentAssetAnnualYield4 = document.getElementById("mejores-inversiones-4-annual-yield").innerHTML = ((investmentAssetAnnualYield4.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield4 = document.getElementById("mejores-inversiones-4-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield4))+"%");
 //5
 let investmentAssetAnnualYield5 = investmentAssets[4].annualYield;
-let bestInvestmentAssetAnnualYield5 = document.getElementById("mejores-inversiones-5-annual-yield").innerHTML = ((investmentAssetAnnualYield5.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield5 = document.getElementById("mejores-inversiones-5-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield5))+"%");
 //6
 let investmentAssetAnnualYield6 = investmentAssets[5].annualYield;
-let bestInvestmentAssetAnnualYield6 = document.getElementById("mejores-inversiones-6-annual-yield").innerHTML = ((investmentAssetAnnualYield6.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield6 = document.getElementById("mejores-inversiones-6-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield6))+"%");
 //7
 let investmentAssetAnnualYield7 = investmentAssets[6].annualYield;
-let bestInvestmentAssetAnnualYield7 = document.getElementById("mejores-inversiones-7-annual-yield").innerHTML = ((investmentAssetAnnualYield7.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield7 = document.getElementById("mejores-inversiones-7-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield7))+"%");
 //8
 let investmentAssetAnnualYield8 = investmentAssets[7].annualYield;
-let bestInvestmentAssetAnnualYield8 = document.getElementById("mejores-inversiones-8-annual-yield").innerHTML = ((investmentAssetAnnualYield8.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield8 = document.getElementById("mejores-inversiones-8-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield8))+"%");
 //9
 let investmentAssetAnnualYield9 = investmentAssets[8].annualYield;
-let bestInvestmentAssetAnnualYield9 = document.getElementById("mejores-inversiones-9-annual-yield").innerHTML = ((investmentAssetAnnualYield9.toFixed(1))+"%");
-//2
+let bestInvestmentAssetAnnualYield9 = document.getElementById("mejores-inversiones-9-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield9))+"%");
+//10
 let investmentAssetAnnualYield10 = investmentAssets[9].annualYield;
-let bestInvestmentAssetAnnualYield10 = document.getElementById("mejores-inversiones-10-annual-yield").innerHTML = ((investmentAssetAnnualYield10.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield10 = document.getElementById("mejores-inversiones-10-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield10))+"%");
+//Percentage number with comma
+function percentageFormat(percentageNumber) {
+    return (
+        percentageNumber.toFixed(1).replace('.', ',')
+    ) 
+}

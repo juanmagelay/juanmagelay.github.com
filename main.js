@@ -288,14 +288,19 @@ let bestInvestmentAssetName3 = document.getElementById("mejores-inversiones-3-as
 //AnnualYields
 //1
 let investmentAssetAnnualYield1 = investmentAssets[0].annualYield;
-let bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((investmentAssetAnnualYield1.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield1))+"%");
 //2
 let investmentAssetAnnualYield2 = investmentAssets[1].annualYield;
-let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((investmentAssetAnnualYield2.toFixed(1))+"%");
+let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield2))+"%");
 //3
 let investmentAssetAnnualYield3 = investmentAssets[2].annualYield;
-let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((investmentAssetAnnualYield3.toFixed(1))+"%");
-
+let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield3))+"%");
+//Percentage number with comma
+function percentageFormat(percentageNumber) {
+    return (
+        percentageNumber.toFixed(1).replace('.', ',')
+    ) 
+}
 
 //Estrategia sugerida para invertir - Suggested strategy for invest - HTML Manipulate
 //Three elements to invest
