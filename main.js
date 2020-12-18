@@ -301,30 +301,30 @@ let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversion
 //Three elements to invest
 //PercentajeOfInvestment
 //1
-let suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("estrategia-sugerida-1-percentaje-of-investment").innerHTML = (25+"%");
+let suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
 //2
-let suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("estrategia-sugerida-2-percentaje-of-investment").innerHTML = (28+"%");
+let suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (28+"%");
 //3
-let suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("estrategia-sugerida-3-percentaje-of-investment").innerHTML = (47+"%");
+let suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (47+"%");
 //AssetNames
 //1
-let suggestedInvestmentAssetName1 = document.getElementById("estrategia-sugerida-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName);
+let suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName);
 //2
-let suggestedInvestmentAssetName2 = document.getElementById("estrategia-sugerida-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName);
+let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName);
 //3
-let suggestedInvestmentAssetName3 = document.getElementById("estrategia-sugerida-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName);
+let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName);
 //TotalMoney
 //1
-let suggestedInvestmentTotalMoney1 = document.getElementById("estrategia-sugerida-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000))));
+let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000))));
 //2
-let suggestedInvestmentTotalMoney2 = document.getElementById("estrategia-sugerida-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000))));
+let suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000))));
 //3
-let suggestedInvestmentTotalMoney3 = document.getElementById("estrategia-sugerida-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000))));
+let suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000))));
 //Total Annual Yield
 //TotalAnnualYield
-let totalAnnualYield = document.getElementById("estrategia-sugerida-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
+let totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
 //TotalAnnualMoney
-let totalAnnualMoney = document.getElementById("estrategia-sugerida-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated()))));
+let totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated()))));
 
 function thousandsSeparatorsForMoney(anAmountOfMoney) {
     var numParts = anAmountOfMoney.toString().split(".");
@@ -340,13 +340,14 @@ function totalMoneyCalculated() {
     return (annualYieldCalculated() * 1000)
 }
 
-//Home events TO FIX
-document.getElementById("estrategia-sugerida-1-percentaje-of-investment").onclick = logTheInterestInMercadoPago;
-document.getElementById("interested-in-supervielle").addEventListener("click", logTheInterestInSupervielle);
+//Home events
+document.getElementById("strategy-suggested-1-percentage-of-investment").onclick = logTheInterestInMercadoPago;
 
 function logTheInterestInSupervielle() {
     console.log("Interested in Supervielle");
 }
+
+document.getElementById("interested-in-supervielle").addEventListener("click", logTheInterestInSupervielle);
 
 function logTheInterestInMercadoPago() {
     console.log("Interested in Mercado Pago");
