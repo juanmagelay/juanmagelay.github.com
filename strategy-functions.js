@@ -318,7 +318,7 @@ function totalMoneyCalculated() {
 
 //Strategy amount and days form
 //Get values
-let strategyAmount = document.getElementById("strategy-amount").onkeyup = amountValue;
+/*let strategyAmount = document.getElementById("strategy-amount").onkeyup = amountValue;
 
 function amountValue() {
     let amountValue = document.getElementById("strategy-amount").value;
@@ -338,17 +338,9 @@ document.getElementById("strategy-days").onclick = logTheInterestInChange;
 function logTheInterestInChange() {
     console.log("Interested in change");
 }
-
+*/
 
 //Strategy based on the amount and days
-
-var strategyAmount2 = 100000;
-
-var strategyDays2 = 30;
-
-var strategyAmount2 = document.getElementById("strategy-amount").onkeyup = strategyBasedOnAmount_AndDays_(strategyAmount2, strategyDays2);
-
-var strategyDays2 = document.getElementById("strategy-days").onkeyup = strategyBasedOnAmount_AndDays_(strategyAmount2, strategyDays2);
 
 function annualYieldCalculated2(percentage1, percentage2, percentage3, asset1, asset2, asset3) {
     return (
@@ -362,7 +354,19 @@ function totalMoneyCalculated2() {
     return (annualYieldCalculated2() * 1000)
 }
 
-function strategyBasedOnAmount_AndDays_(anAmountValue, aDaysValue) {
+function anAmountValue() {
+    let anAmountValue = document.getElementById("strategy-amount").value;
+}
+
+function aDaysValue() {
+    let aDaysValue = document.getElementById("strategy-days").value;
+}
+
+
+function strategyBasedOnAmount_AndDays_() {
+    var strategyAmount2 = document.getElementById("strategy-amount").onkeyup = anAmountValue;
+    var strategyDays2 = document.getElementById("strategy-amount").onkeyup = aDaysValue;
+    
     
     if (anAmountValue > 2000 && aDaysValue > 90) {
         
@@ -447,5 +451,6 @@ function strategyBasedOnAmount_AndDays_(anAmountValue, aDaysValue) {
     } 
 }
 
-
+let change = document.getElementById("strategy-amount").addEventListener("change", strategyBasedOnAmount_AndDays_);
+let change2 = document.getElementById("strategy-days").addEventListener("change", strategyBasedOnAmount_AndDays_);
 
