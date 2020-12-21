@@ -95,15 +95,15 @@ let fondoMercadoPago = new InvestmentAsset( //MANUAL
     "Pesos"
 );
 let ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
-    "Rulo dólares oficiales", 
+    "Rulo dólar oficial", 
     ((blueDollar12m / blueDollarToday) * blueDollarToday) / (88 * dollarTax), 
-    "Alguna", 
+    "", 
     "Casas de cambio", 
     "Rulos con dólares", 
     "Dólares"
 );
 let compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
-    "Dólares oficiales", 
+    "Dólar oficial", 
     oficialDollar12m / (88 * dollarTax), 
     "Supervielle", 
     "Bancos tradicionales", 
@@ -111,7 +111,7 @@ let compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
     "Dólares"
 );
 let compraDeUsdc = new InvestmentAsset( //MANUAL
-    "Dólares virtuales", 
+    "Dólar virtual", 
     1.4, 
     "Ripio", 
     "Cripto billeteras", 
