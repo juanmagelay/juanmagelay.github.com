@@ -355,19 +355,19 @@ function totalMoneyCalculated2() {
 }
 
 function anAmountValue() {
-    let anAmountValue = document.getElementById("strategy-amount").value;
+    var anAmountValue = document.getElementById("strategy-amount").value;
 }
 
 function aDaysValue() {
-    let aDaysValue = document.getElementById("strategy-days").value;
+    var aDaysValue = document.getElementById("strategy-days").value;
 }
 
-
-function strategyBasedOnAmount_AndDays_() {
+function strategyBasedOnAmountAndDays() {
+    var strategyAmount2 = 100000;
+    var strategyDays2 = 30;
     var strategyAmount2 = document.getElementById("strategy-amount").onkeyup = anAmountValue;
     var strategyDays2 = document.getElementById("strategy-amount").onkeyup = aDaysValue;
-    
-    
+
     if (anAmountValue > 2000 && aDaysValue > 90) {
         
         //25% Mercado Pago
@@ -451,6 +451,6 @@ function strategyBasedOnAmount_AndDays_() {
     } 
 }
 
-let change = document.getElementById("strategy-amount").addEventListener("change", strategyBasedOnAmount_AndDays_);
-let change2 = document.getElementById("strategy-days").addEventListener("change", strategyBasedOnAmount_AndDays_);
+document.getElementById("strategy-amount").addEventListener("change", strategyBasedOnAmountAndDays);
+document.getElementById("strategy-days").addEventListener("change", strategyBasedOnAmountAndDays);
 
