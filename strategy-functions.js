@@ -353,10 +353,11 @@ function annualYieldCalculated2(percentage1, percentage2, percentage3, asset1, a
     ) 
 }
 
+/*
 function totalMoneyCalculated2() {
-    return (annualYieldCalculated2() * 1000)
+    return (annualYieldCalculated2(percentage1, percentage2, percentage3, asset1, asset2, asset3) * 1000)
 }
-
+*/
 
 document.getElementById("push-data").onclick = strategyBasedOnAmountAndDays;
     
@@ -385,8 +386,8 @@ function strategyBasedOnAmountAndDays(e) {
             var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000)))); //MANUAL
 
             annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle);
-            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2())+"%");
-            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated2()))));
+            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle))+"%");
+            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle)*1000))));
         
         } else if (anAmountValue > 2000 && aDaysValue <= 90) {
         
@@ -406,8 +407,8 @@ function strategyBasedOnAmountAndDays(e) {
             var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeDolaresOficiales.annualYield)*1000)))); //MANUAL
 
             annualYieldCalculated2(0.25, 0.50, 0.25, fondoMercadoPago, plazoFijoTradicionalSupervielle, compraDeDolaresOficiales);
-            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2())+"%");
-            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated2()))));
+            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.25, 0.50, 0.25, fondoMercadoPago, plazoFijoTradicionalSupervielle, compraDeDolaresOficiales))+"%");
+            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((annualYieldCalculated2(0.25, 0.50, 0.25, fondoMercadoPago, plazoFijoTradicionalSupervielle, compraDeDolaresOficiales)*1000))));
         
         } else if (anAmountValue < 1000 && aDaysValue >= 0) {
             
@@ -427,8 +428,8 @@ function strategyBasedOnAmountAndDays(e) {
             var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeDolaresOficiales.annualYield)*1000)))); //MANUAL
 
             annualYieldCalculated2(0.20, 0.60, 0.20, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales); 
-            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2())+"%");
-            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated2()))));
+            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.20, 0.60, 0.20, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales))+"%");
+            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((annualYieldCalculated2(0.20, 0.60, 0.20, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales)*1000))));
 
         } else if (anAmountValue <= 2000 && aDaysValue >= 0) {
             
@@ -448,8 +449,8 @@ function strategyBasedOnAmountAndDays(e) {
             var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeDolaresOficiales.annualYield)*1000)))); //MANUAL
 
             annualYieldCalculated2(0.40, 0.20, 0.40, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales); 
-            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2())+"%");
-            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated2()))));
+            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.40, 0.20, 0.40, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales))+"%");
+            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((annualYieldCalculated2(0.40, 0.20, 0.40, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales)*1000))));
         } 
 }
 
