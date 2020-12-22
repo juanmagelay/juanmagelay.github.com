@@ -318,7 +318,8 @@ function totalMoneyCalculated() {
 
 //Strategy amount and days form
 //Get values
-/*let strategyAmount = document.getElementById("strategy-amount").onkeyup = amountValue;
+
+let strategyAmount = document.getElementById("strategy-amount").onkeyup = amountValue;
 
 function amountValue() {
     let amountValue = document.getElementById("strategy-amount").value;
@@ -331,6 +332,8 @@ function daysValue() {
     console.log(this.value);
 }
 
+
+
 //Get clicks on form
 document.getElementById("strategy-amount").onclick = logTheInterestInChange;
 document.getElementById("strategy-days").onclick = logTheInterestInChange;
@@ -338,7 +341,7 @@ document.getElementById("strategy-days").onclick = logTheInterestInChange;
 function logTheInterestInChange() {
     console.log("Interested in change");
 }
-*/
+
 
 //Strategy based on the amount and days
 
@@ -359,7 +362,7 @@ document.getElementById("push-data").onclick = strategyBasedOnAmountAndDays;
     
 function strategyBasedOnAmountAndDays(e) {
         e.preventDefault();
-        console.log("Funciona la función");
+        console.log("The main function works");
         var anAmountValue = document.getElementById("strategy-amount").value;
         var aDaysValue = document.getElementById("strategy-days").value;
         
@@ -368,8 +371,8 @@ function strategyBasedOnAmountAndDays(e) {
         
             //25% Mercado Pago
             var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
-            var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = ("fondoMercadoPago.assetName" + " " + "fondoMercadoPago.entityName"); //MANUAL
-            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+"thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))"); //MANUAL
+            var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
+            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
         
             //28% Plazo fijo UVA
             var suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (28+"%"); //MANUAL
@@ -387,8 +390,11 @@ function strategyBasedOnAmountAndDays(e) {
         
         } else if (anAmountValue > 2000 && aDaysValue <= 90) {
         
-            // 25% Mercado Pago (IDEM)
-
+            // 25% Mercado Pago
+            var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
+            var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
+            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
+        
             // 50% Plazo fijo
             var suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (50+"%"); //MANUAL
             var suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoTradicionalSupervielle.assetName + " " + plazoFijoTradicionalSupervielle.entityName); //MANUAL
@@ -404,6 +410,7 @@ function strategyBasedOnAmountAndDays(e) {
             var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated2()))));
         
         } else if (anAmountValue < 1000 && aDaysValue >= 0) {
+            
             //20% Mercado Pago
             var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (20+"%");
             var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
@@ -424,8 +431,7 @@ function strategyBasedOnAmountAndDays(e) {
             var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated2()))));
 
         } else if (anAmountValue <= 2000 && aDaysValue >= 0) {
-            //40% Mercado Pago, 20% Ripio, 40% Dolar oficial 
-
+            
             //40% Mercado Pago
             var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (40+"%");
             var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
