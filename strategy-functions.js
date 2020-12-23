@@ -313,9 +313,6 @@ function totalMoneyCalculated() {
 }
 
 
-
-
-
 //Strategy amount and days form
 //Get values
 
@@ -331,7 +328,6 @@ let strategyDays = document.getElementById("strategy-days").onkeyup = daysValue;
 function daysValue() {
     console.log(this.value);
 }
-
 
 
 //Get clicks on form
@@ -353,12 +349,6 @@ function annualYieldCalculated2(percentage1, percentage2, percentage3, asset1, a
     ) 
 }
 
-/*
-function totalMoneyCalculated2() {
-    return (annualYieldCalculated2(percentage1, percentage2, percentage3, asset1, asset2, asset3) * 1000)
-}
-*/
-
 document.getElementById("push-data").onclick = strategyBasedOnAmountAndDays;
     
 function strategyBasedOnAmountAndDays(e) {
@@ -373,17 +363,17 @@ function strategyBasedOnAmountAndDays(e) {
             //25% Mercado Pago
             var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
             var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
-        
+            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.25))); //MANUAL
+
             //28% Plazo fijo UVA
             var suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (28+"%"); //MANUAL
             var suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.28))); //MANUAL
             
             //47% Fondo Supervielle
             var suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (47+"%");
             var suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.47))); //MANUAL
 
             annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle);
             var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle))+"%");
@@ -394,17 +384,17 @@ function strategyBasedOnAmountAndDays(e) {
             // 25% Mercado Pago
             var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
             var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.25))); //MANUAL
         
             // 50% Plazo fijo
             var suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (50+"%"); //MANUAL
             var suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoTradicionalSupervielle.assetName + " " + plazoFijoTradicionalSupervielle.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoTradicionalSupervielle.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.50))); //MANUAL
 
             //25% Dolar oficial
             var suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (25+"%");
             var suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (compraDeDolaresOficiales.assetName + " " + compraDeDolaresOficiales.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeDolaresOficiales.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.25))); //MANUAL
 
             annualYieldCalculated2(0.25, 0.50, 0.25, fondoMercadoPago, plazoFijoTradicionalSupervielle, compraDeDolaresOficiales);
             var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.25, 0.50, 0.25, fondoMercadoPago, plazoFijoTradicionalSupervielle, compraDeDolaresOficiales))+"%");
@@ -415,17 +405,17 @@ function strategyBasedOnAmountAndDays(e) {
             //20% Mercado Pago
             var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (20+"%");
             var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.20))); //MANUAL
             
             //60% Ripio
             var suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (60+"%"); //MANUAL
             var suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (compraDeUsdc.assetName + " " + compraDeUsdc.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeUsdc.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.60))); //MANUAL
             
             //20% Dolar oficial
             var suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (20+"%");
             var suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (compraDeDolaresOficiales.assetName + " " + compraDeDolaresOficiales.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeDolaresOficiales.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.20))); //MANUAL
 
             annualYieldCalculated2(0.20, 0.60, 0.20, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales); 
             var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.20, 0.60, 0.20, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales))+"%");
@@ -436,17 +426,17 @@ function strategyBasedOnAmountAndDays(e) {
             //40% Mercado Pago
             var suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (40+"%");
             var suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.40))); //MANUAL
 
             //20% Ripio
             var suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (20+"%"); //MANUAL
             var suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (compraDeUsdc.assetName + " " + compraDeUsdc.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeUsdc.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.20))); //MANUAL
             
             //40% Dolar oficial
             var suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (40+"%");
             var suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (compraDeDolaresOficiales.assetName + " " + compraDeDolaresOficiales.entityName); //MANUAL
-            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((compraDeDolaresOficiales.annualYield)*1000)))); //MANUAL
+            var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.40))); //MANUAL
 
             annualYieldCalculated2(0.40, 0.20, 0.40, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales); 
             var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.40, 0.20, 0.40, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales))+"%");
