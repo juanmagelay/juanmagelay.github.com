@@ -320,11 +320,11 @@ let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-
 let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
 //TotalMoney
 //1
-let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoMercadoPago.annualYield)*1000)))); //MANUAL
+let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.25))); //MANUAL
 //2
-let suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((plazoFijoUVASupervielle.annualYield)*1000)))); //MANUAL
+let suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.28))); //MANUAL
 //3
-let suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(((fondoSupervielle.annualYield)*1000)))); //MANUAL
+let suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.47))); //MANUAL
 //Total Annual Yield
 //TotalAnnualYield
 let totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
