@@ -18,19 +18,6 @@ console.log(oficialDollar12m);
 console.log(dollarTax);
 
 
-//Object constructor function
-class InvestmentAsset {
-    constructor (newAssettName, newAnnualYield, newEntityName, newEntityTipe, newInvestmentType, newAssetCurrency) {
-        this.assetName = newAssettName;
-        this.annualYield = newAnnualYield;
-        this.entityName = newEntityName;
-        this.entityType = newEntityTipe;
-        this.investmentType = newInvestmentType;
-        this.assetCurrency = newAssetCurrency;
-    }
-}
-
-
 //Investment Assets new Objects
 let plazoFijoTradicionalSupervielle = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
