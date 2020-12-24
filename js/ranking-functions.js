@@ -77,3 +77,6 @@ function percentageFormat(percentageNumber) {
         percentageNumber.toFixed(1).replace('.', ',')
     ) 
 }
+
+
+
