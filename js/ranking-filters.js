@@ -8,9 +8,17 @@ $( document ).ready( function() {
 
 function filterEvent(){
     //Obtaining all inputs of HTML.
-    let labels = document.getElementsByClassName("custom-control-label");
-    console.log(labels);
-    console.log(labels[0].textContent);
+    let inputs = document.getElementsByTagName("input");
+    //Create a list of filters or inputs checked.
+    let checkboxesChecked = [];
+    //Iterate all inputs for filter these.
+    for (const elementHTML of inputs) {
+        //If it is checked, add it to the list.
+        if(elementHTML.checked){
+        checkboxesChecked.push(elementHTML.id);
+        }
+    }
+    console.log(checkboxesChecked);
 }
 
 filterEvent();
