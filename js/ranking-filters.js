@@ -15,6 +15,7 @@ function filterEvent(){
     //Iterate all inputs for filter these.
     countTheChecks();
     console.log(checkboxesChecked);
+    //HERE --- apply filter to the investmentAssets ranking
     checkboxesChecked = [];
 }
 
