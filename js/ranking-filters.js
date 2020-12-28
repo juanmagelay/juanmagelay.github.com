@@ -3,6 +3,7 @@ $( document ).ready( function() {
    console.log("The DOM is loaded.");
 });
 
+
 //Filters Attempt 3 - Get the input checks checked and filter the array
 
 //Obtaining all inputs of HTML.
@@ -25,10 +26,6 @@ function countTheChecks() {
         }
     }
 }
-
-
-
-
 
 
 /*
