@@ -4,7 +4,7 @@ $( document ).ready( function() {
 });
 
 
-//Filters
+//Filters Attempt 3 - Inputs don't work to uncheck.
 
 function filterEvent(){
     //Obtaining all inputs of HTML.
@@ -22,6 +22,9 @@ function filterEvent(){
 }
 
 filterEvent();
+
+
+
 
 /*
 //Filters
