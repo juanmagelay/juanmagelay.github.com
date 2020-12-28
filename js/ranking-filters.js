@@ -3,6 +3,18 @@ $( document ).ready( function() {
    console.log("The DOM is loaded.");
 });
 
+
+//Filters
+
+function filterEvent(){
+    //Obtaining all inputs of HTML.
+    let labels = document.getElementsByClassName("custom-control-label");
+    console.log(labels);
+    console.log(labels[0].textContent);
+}
+
+filterEvent();
+
 /*
 //Filters
 
