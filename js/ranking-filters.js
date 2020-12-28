@@ -3,25 +3,30 @@ $( document ).ready( function() {
    console.log("The DOM is loaded.");
 });
 
+//Filters Attempt 3 - Get the input checks checked and filter the array
 
-//Filters Attempt 3 - Inputs don't work to uncheck.
+//Obtaining all inputs of HTML.
+let inputs = document.getElementsByTagName("input");
+//Create a list of filters or inputs checked.
+let checkboxesChecked = [];
 
 function filterEvent(){
-    //Obtaining all inputs of HTML.
-    let inputs = document.getElementsByTagName("input");
-    //Create a list of filters or inputs checked.
-    let checkboxesChecked = [];
     //Iterate all inputs for filter these.
+    countTheChecks();
+    console.log(checkboxesChecked);
+    checkboxesChecked = [];
+}
+
+function countTheChecks() {
     for (const elementHTML of inputs) {
         //If it is checked, add it to the list.
         if(elementHTML.checked){
         checkboxesChecked.push(elementHTML.id);
         }
     }
-    console.log(checkboxesChecked);
 }
 
-filterEvent();
+
 
 
 
