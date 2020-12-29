@@ -1,4 +1,61 @@
 //Mejores inversiones - Best investment assets - HTML Manipulate
+function generateOutput1(listOfInvestmentAssets){
+    let father = document.getElementById("ranking-table-1");
+    let inner = "";
+    
+    
+        for (const investmentAsset of listOfInvestmentAssets) {
+            inner += 
+                `<li class="list-group-item rounded d-flex">
+                    <p class="ranking-number align-self-center align-middle">
+                        ${investmentAssets.indexOf(investmentAsset) + 1}
+                    </p>
+                    <div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
+                        <p class="p-2 asset-name align-self-start" id="mejores-inversiones-1-asset-name">
+                            ${investmentAsset.assetName} en ${investmentAsset.entityName}
+                        </p>
+                        <p class="p-2 asset-economics align-self-start" id="mejores-inversiones-1-annual-yield">
+                            ${percentageFormat(investmentAsset.annualYield)}%
+                        </p>
+                    </div>
+                </li>`;
+        
+    }
+    father.innerHTML = inner;
+    console.log("The main function works");
+}
+
+function generateOutput2(listOfInvestmentAssets){
+    let father = document.getElementById("ranking-table-2");
+    let inner = "";
+    
+    
+        for (const investmentAsset of listOfInvestmentAssets) {
+            inner += 
+                `<li class="list-group-item rounded d-flex">
+                    <p class="ranking-number align-self-center align-middle">
+                        ${investmentAssets.indexOf(investmentAsset) + 1}
+                    </p>
+                    <div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
+                        <p class="p-2 asset-name align-self-start" id="mejores-inversiones-1-asset-name">
+                            ${investmentAsset.assetName} en ${investmentAsset.entityName}
+                        </p>
+                        <p class="p-2 asset-economics align-self-start" id="mejores-inversiones-1-annual-yield">
+                            ${percentageFormat(investmentAsset.annualYield)}%
+                        </p>
+                    </div>
+                </li>`;
+        
+    }
+    father.innerHTML = inner;
+    console.log("The main function works");
+}
+
+generateOutput1(investmentAssets);
+generateOutput2(investmentAssets);
+
+
+/*
 //AssetNames and EntityNames
 //1
 let investmentAssetName1 = investmentAssets[0].assetName;
@@ -71,6 +128,7 @@ let bestInvestmentAssetAnnualYield9 = document.getElementById("mejores-inversion
 //10
 let investmentAssetAnnualYield10 = investmentAssets[9].annualYield;
 let bestInvestmentAssetAnnualYield10 = document.getElementById("mejores-inversiones-10-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield10))+"%");
+*/
 //Percentage number with comma
 function percentageFormat(percentageNumber) {
     return (
