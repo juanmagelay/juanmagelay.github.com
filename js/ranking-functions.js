@@ -10,7 +10,7 @@ function generateOutput(listOfInvestmentAssets){
                     </p>
                     <div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
                         <p class="p-2 asset-name align-self-start">
-                            ${investmentAsset.assetName} en ${investmentAsset.entityName}
+                            ${investmentAsset.assetName} ${investmentAsset.entityName}
                         </p>
                         <p class="p-2 asset-economics align-self-start">
                             ${percentageFormat(investmentAsset.annualYield)}%
