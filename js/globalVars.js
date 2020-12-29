@@ -162,11 +162,10 @@ function investmentAssetstop5RankingByAnuualYields() {
 
 investmentAssetstop5RankingByAnuualYields();
 
-
+var onlyInvestmentAssetsInDollars = [];
 //Filters - Investment assets in Dollars
 function showOnlyInvestmentAssetsInDollars() {
     let onlyDollars = "Dólares";
-    let onlyInvestmentAssetsInDollars = [];
     for (let investmentAsset of investmentAssets) {
         for(let assetCurrency in investmentAsset){
             if(investmentAsset[assetCurrency] == onlyDollars){
@@ -179,11 +178,10 @@ function showOnlyInvestmentAssetsInDollars() {
 
 showOnlyInvestmentAssetsInDollars();
 
-
+var onlyInvestmentAssetsInPesos = [];
 //Filters - Investment assets in Pesos
 function showOnlyInvestmentAssetsInPesos() {
     let onlyPesos = "Pesos";
-    let onlyInvestmentAssetsInPesos = [];
     for (let investmentAsset of investmentAssets) {
         for(let assetCurrency in investmentAsset){
             if(investmentAsset[assetCurrency] == onlyPesos){

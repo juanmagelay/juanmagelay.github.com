@@ -13,15 +13,13 @@ function filterEvent(){
     //Iterate all inputs for filter these.
     countTheChecks();
     console.log(checkboxesChecked);
-    //HERE --- apply filter to the investmentAssets ranking
+    //Apply filter to the investmentAssets ranking
     if ((checkboxesChecked.includes("defaultChecked1") == false) && 
         (checkboxesChecked.includes("defaultChecked2") == false)) {
         alert("Elegí al menos una moneda de inversión, porque Yuanes todavía no soportamos. Patacones tampoco.");
     } else if (checkboxesChecked.includes("defaultChecked1") == false) {
-        showOnlyInvestmentAssetsInDollars(); //onlyInvestmentAssetsInDollars
         generateOutput(onlyInvestmentAssetsInDollars);
     } else if (checkboxesChecked.includes("defaultChecked2") == false) {
-        showOnlyInvestmentAssetsInPesos(); //onlyInvestmentAssetsInPesos
         generateOutput(onlyInvestmentAssetsInPesos);
     }
     checkboxesChecked = [];
