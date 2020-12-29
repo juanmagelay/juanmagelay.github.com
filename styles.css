@@ -43,6 +43,7 @@ h2 {
 }
 
 /* Expenses */
+
 .card-filled {
 	color: #FFFFFF;
 	font-weight: normal;
@@ -211,6 +212,10 @@ h2 {
 		margin-bottom: 12px;
 	}
 
+	#ranking-container {
+		margin-top: -50px;
+	}	
+
 	/* Strategy */
 
 	.strategy-form-input {
@@ -227,10 +232,6 @@ h2 {
 	}
 
 	/* Filters */
-
-	.filters-bg {
-		background-color: #FFFFFF;
-	}
 	
 	.after-filters {
 		margin-top: 50px;
@@ -313,6 +314,10 @@ h2 {
 		.btn-outline-primary {
 			height: 48.5px;
 			line-height: 30px;
+		}
+
+		#ranking-container {
+			margin-top: 200px;
 		}
 
 	}
