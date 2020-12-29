@@ -34,18 +34,52 @@
 			<div class="container col-md-6 col-xl-5">
 				<h1>Todas las inversiones</h1>
 			</div>
-			<div class="container col-md-6 col-xl-5">
-				<a href="ranking-filters.html" class="btn btn-outline-primary btn-lg btn-block" role="button">
-					<i class="fas fa-filter"></i>
-					Filtrar 
-				</a>
-			</div>
 		</div>
 		<div class="row row-cols-1 row-cols-md-2">
+
+			<!-- Filters -->
+			<div class="home-list container col-md-6 col-xl-5">
+				<h2>Moneda de inversión</h2>
+				<div class="card justify-content-center" id="currency-filter">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultChecked1" checked>
+						<label class="custom-control-label" for="defaultChecked1">Pesos</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+						<label class="custom-control-label" for="defaultChecked2">Dólares</label>
+					</div>
+				</div>
+				<h2 class="after-filters">Tipos de inversiones</h1>
+				<div class="card justify-content-center">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultChecked3" checked>
+						<label class="custom-control-label" for="defaultChecked3">Plazos fijos</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultChecked4" checked>
+						<label class="custom-control-label" for="defaultChecked4">Rulos con dólares</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultChecked5" checked>
+						<label class="custom-control-label" for="defaultChecked5">Cripto</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultChecked6" checked>
+						<label class="custom-control-label" for="defaultChecked6">Fondos de inversión</label>
+					</div>
+				</div>
+				<div class="card justify-content-center">
+					<a onclick="filterEvent();" class="after-filters btn btn-primary btn-lg btn-block" id="apply-filters" role="button">Aplicar filtros
+					</a>
+				</div>
+			</div>
+
+
 			<!--  Columna 1 del ranking  -->
 			<div class="home-list container col-md-6 col-xl-5">
 				<div class="card justify-content-center">
-					<ul class="list-group" id="ranking-table-1">
+					<ul class="list-group" id="ranking-table">
 						<li class="list-group-item rounded d-flex">
 							<p class="ranking-number align-self-center align-middle">1</p>
 							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
@@ -82,48 +116,6 @@
 							</div>
 						</li>
 						
-					</ul>
-				</div>
-			</div>
-			<!--  Columna 2 del ranking  -->
-			<div class="home-list second-ranking-col container col-md-6 col-xl-5">
-				<div class="card justify-content-center">
-					<ul class="list-group" id="ranking-table-2">
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">6</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start" id="mejores-inversiones-6-asset-name">Fondo en Ualá</p>
-								<p class="p-2 asset-economics align-self-start" id="mejores-inversiones-6-annual-yield">25,1%</p>		
-							</div>
-						</li>
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">7</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start" id="mejores-inversiones-7-asset-name">Fondo en Supervielle</p>
-								<p class="p-2 asset-economics align-self-start" id="mejores-inversiones-7-annual-yield">23,9%</p>		
-							</div>
-						</li>
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">8</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start" id="mejores-inversiones-8-asset-name">Caja de ahorro en Reba</p>
-								<p class="p-2 asset-economics align-self-start" id="mejores-inversiones-8-annual-yield">10,1%</p>		
-							</div>
-						</li>
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">9</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start" id="mejores-inversiones-9-asset-name">Caja de ahorro en Brubank</p>
-								<p class="p-2 asset-economics align-self-start" id="mejores-inversiones-9-annual-yield">9,7%</p>		
-							</div>
-						</li>
-						<li class="list-group-item rounded d-flex">
-							<p class="ranking-number align-self-center align-middle">10</p>
-							<div class="d-flex flex-column bd-highlight mb-2 justify-content-start">
-								<p class="p-2 asset-name align-self-start" id="mejores-inversiones-10-asset-name">Caja de ahorro en Ciudad</p>
-								<p class="p-2 asset-economics align-self-start" id="mejores-inversiones-10-annual-yield">1,9%</p>		
-							</div>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -181,6 +173,7 @@
 	<!-- JS Script -->
 	<script src="js/investmentAsset.js"></script>
 	<script src="js/globalVars.js"></script>
+	<script src="js/ranking-filters.js"></script>
 	<script src="js/ranking-functions.js"></script>
 	
 </body>
