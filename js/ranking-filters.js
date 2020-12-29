@@ -23,7 +23,7 @@ function countTheChecks() {
     for (const elementHTML of inputs) {
         //If it is checked, add it to the list.
         if(elementHTML.checked){
-        checkboxesChecked.push(elementHTML.id);
+            checkboxesChecked.push(elementHTML.id);
         }
     }
 }

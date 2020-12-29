@@ -82,7 +82,15 @@ function annualYieldCalculated2(percentage1, percentage2, percentage3, asset1, a
     ) 
 }
 
+//From Calcular button
 document.getElementById("push-data").onclick = strategyBasedOnAmountAndDays;
+
+//From Enter key
+$("form").on('keyup',function(e) {
+    if(e.which == 13) { //13 = Enter code
+        strategyBasedOnAmountAndDays(e);
+    }
+});
     
 function strategyBasedOnAmountAndDays(e) {
         e.preventDefault();
