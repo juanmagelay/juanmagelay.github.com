@@ -1,5 +1,3 @@
-var filterApplied = "none";
-
 //Ranking
 function generateOutput(listOfInvestmentAssets){
     let father = document.getElementById("ranking-table");
