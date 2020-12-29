@@ -89,6 +89,9 @@ document.getElementById("push-data").onclick = strategyBasedOnAmountAndDays;
 $("form").on('keyup',function(e) {
     if(e.which == 13) { //13 = Enter code
         strategyBasedOnAmountAndDays(e);
+    } else if (e.which == 9) { //9 = Tab code
+        console.log("You are an advanced user.");
+        localStorage.setItem('UserType', 'Advanced');
     }
 });
     
@@ -184,4 +187,5 @@ function strategyBasedOnAmountAndDays(e) {
             var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((annualYieldCalculated2(0.40, 0.20, 0.40, fondoMercadoPago, compraDeUsdc, compraDeDolaresOficiales)*anAmountValue/100))));
         } 
 }
+
 
