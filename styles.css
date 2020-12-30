@@ -439,5 +439,13 @@ h2 {
 		}
 }
 	
+/* XG - Desktop - 1440px */
 
+@media (min-width: 1440px) {
+	
+	#strategy-container {
+		margin-bottom: 150px;
+	}
+
+}
 
