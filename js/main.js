@@ -3,6 +3,11 @@ setTimeout( function() {
     document.getElementById("splash").style.display = "none";
 }, 2000);
 
+$("#human").animate( {"left": "15%"}, 800, "swing", () => {
+    $("#plant").animate( {"opacity": "1"}, 200, "linear" );
+});
+
+
 //Tooltip
 $('#juanma-profile-photo').tooltip('hover');
 
