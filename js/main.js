@@ -7,10 +7,6 @@ $("#human").animate( {"left": "15%"}, 800, "swing", () => {
     $("#plant").animate( {"opacity": "1"}, 200, "linear" );
 });
 
-
-//Tooltip
-$('#juanma-profile-photo').tooltip('hover');
-
 //Mejores inversiones - Best investment assets - HTML Manipulate
 //AssetNames and EntityNames
 //1
