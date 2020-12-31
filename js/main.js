@@ -3,6 +3,9 @@ setTimeout( function() {
     document.getElementById("splash").style.display = "none";
 }, 2000);
 
+//Tooltip
+$('#juanma-profile-photo').tooltip('hover');
+
 //Mejores inversiones - Best investment assets - HTML Manipulate
 //AssetNames and EntityNames
 //1
