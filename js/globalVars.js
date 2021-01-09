@@ -3,7 +3,17 @@ $('#juanma-profile-photo').tooltip();
 
 //Global vars
 //JSON
-let globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}'; //MANUAL
+const globalVars = '{"inflation12m":52.5, "blueDollar12m":212.4, "blueDollarToday":144, "oficialDollarToday":82.1, "oficialDollar12m":121.1, "dollarTax":1.65}'; //MANUAL
+
+//Dollar values obtained by API
+const dollarValues = function(){
+    $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", 
+    function(posts){
+      console.log(posts);
+    })
+};
+dollarValues();
+
 //OBJECTS
 const inflation12m = JSON.parse(globalVars).inflation12m;
 const blueDollar12m = JSON.parse(globalVars).blueDollar12m;
@@ -12,6 +22,23 @@ const oficialDollarToday = JSON.parse(globalVars).oficialDollarToday;
 const oficialDollar12m = JSON.parse(globalVars).oficialDollar12m;
 const dollarTax = JSON.parse(globalVars).dollarTax;
 
+//API Dollar
+/*const dollarValues = $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales");
+
+$(function(){
+    $.get(dollarValues,callbackDollarValues);
+});
+
+function callbackDollarValues(response, state){
+    if(state === "success"){
+        let dollarValuesObtained = [];
+        for (const posts of dollarValues) {
+            dollarValuesObtained.push(dollarValues);
+        }
+    }
+    console.table(dollarValuesObtained);
+}*/
+
 //TEST
 console.log(inflation12m);
 console.log(blueDollar12m);
@@ -19,7 +46,6 @@ console.log(blueDollarToday);
 console.log(oficialDollarToday);
 console.log(oficialDollar12m);
 console.log(dollarTax);
-
 
 //Investment Assets new Objects
 let plazoFijoTradicionalSupervielle = new InvestmentAsset( //MANUAL
