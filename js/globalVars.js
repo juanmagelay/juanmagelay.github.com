@@ -1,5 +1,5 @@
 //Tooltip
-$('#juanma-profile-photo').tooltip('hover');
+$('#juanma-profile-photo').tooltip();
 
 //Global vars
 //JSON
