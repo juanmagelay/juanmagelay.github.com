@@ -2,12 +2,14 @@
 $('#juanma-profile-photo').tooltip();
 
 //Global vars from data
-const inflation12m = JSON.parse(globalVars).inflation12m;
-const blueDollar12m = JSON.parse(globalVars).blueDollar12m;
-const blueDollarToday = JSON.parse(globalVars).blueDollarToday;
-const oficialDollarToday = JSON.parse(globalVars).oficialDollarToday;
-const oficialDollar12m = JSON.parse(globalVars).oficialDollar12m;
-const dollarTax = JSON.parse(globalVars).dollarTax;
+const inflation12m = globalVars[0].inflation12m;
+const blueDollar12m = globalVars[0].blueDollar12m;
+const blueDollarToday = globalVars[0].blueDollarToday;
+const oficialDollarToday = globalVars[0].oficialDollarToday;
+const oficialDollar12m = globalVars[0].oficialDollar12m;
+const dollarTax = globalVars[0].dollarTax;
+
+
 
 //API Dollar
 /*const dollarValues = $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales");
