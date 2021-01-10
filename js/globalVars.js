@@ -9,25 +9,6 @@ const oficialDollarToday = globalVars[0].oficialDollarToday;
 const oficialDollar12m = globalVars[0].oficialDollar12m;
 const dollarTax = globalVars[0].dollarTax;
 
-
-
-//API Dollar
-/*const dollarValues = $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales");
-
-$(function(){
-    $.get(dollarValues,callbackDollarValues);
-});
-
-function callbackDollarValues(response, state){
-    if(state === "success"){
-        let dollarValuesObtained = [];
-        for (const posts of dollarValues) {
-            dollarValuesObtained.push(dollarValues);
-        }
-    }
-    console.table(dollarValuesObtained);
-}*/
-
 //TEST
 console.log(inflation12m);
 console.log(blueDollar12m);
