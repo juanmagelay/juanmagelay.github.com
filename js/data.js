@@ -1,12 +1,18 @@
 //JSON
 const globalVars = [{
-    "inflation12m":52.5, //MANUAL
-    "blueDollar12m":212.4, //MANUAL
-    "blueDollarToday":144, 
-    "oficialDollarToday":82.1, 
-    "oficialDollar12m":121.1, //MANUAL
+    "inflation12m":52.5
+  }, { //MANUAL
+    "blueDollar12m":212.4
+  }, { //MANUAL
+    "blueDollarToday":144
+  }, { 
+    "oficialDollarToday":82.1
+  }, { 
+    "oficialDollar12m":121.1
+  }, { //MANUAL
     "dollarTax":1.65 //MANUAL
-}]; 
+  }
+]; 
 
 //Dollar values obtained by API
 const dollarValues = function(){
