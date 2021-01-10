@@ -6,7 +6,7 @@ const inflation12m = globalVars[0].inflation12m;
 const blueDollar12m = globalVars[1].blueDollar12m;
 const blueDollarToday = globalVars[2].blueDollarToday;
 const officialDollarToday = globalVars[3].officialDollarToday;
-const oficialDollar12m = globalVars[4].oficialDollar12m;
+const officialDollar12m = globalVars[4].officialDollar12m;
 const dollarTax = globalVars[5].dollarTax;
 
 //TEST
@@ -14,7 +14,7 @@ console.log(inflation12m);
 console.log(blueDollar12m);
 console.log(blueDollarToday);
 console.log(officialDollarToday);
-console.log(oficialDollar12m);
+console.log(officialDollar12m);
 console.log(dollarTax);
 
 
@@ -85,7 +85,7 @@ let ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
 );
 let compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
     "Dólar oficial", 
-    oficialDollar12m / (88 * dollarTax), 
+    officialDollar12m / (88 * dollarTax), 
     "Supervielle", 
     "Bancos tradicionales", 
     "Rulos con dólares", 

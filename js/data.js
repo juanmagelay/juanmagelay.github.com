@@ -8,7 +8,7 @@ const globalVars = [{
   }, { 
     "officialDollarToday":82.1
   }, { 
-    "oficialDollar12m":121.1 //MANUAL
+    "officialDollar12m":121.1 //MANUAL
   }, { 
     "dollarTax":1.65 //MANUAL
   }
