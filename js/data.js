@@ -18,9 +18,9 @@ const globalVars = [{
 const dollarValues = function(){
     $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", 
     function(posts){
-      const officialDollarAPI = { officialDollarAP: parseFloat(posts[0].casa.venta.replace(',', '.')) };
-      const blueDollarAPI = posts[1].casa.venta;
-      globalVars.push(officialDollarAPI);
+      const officialDollarAPI = { officialDollarAPI: parseFloat(posts[0].casa.venta.replace(',', '.')) };
+      const blueDollarAPI = { blueDollarAPI: parseFloat(posts[1].casa.venta.replace(',', '.')) };
+      globalVars.push(officialDollarAPI, blueDollarAPI);
       console.log(globalVars);
       console.log(officialDollarAPI);
       console.log(blueDollarAPI);
@@ -28,6 +28,3 @@ const dollarValues = function(){
 };
 
 dollarValues();
-
-// console.log(officialDollarAPI); Outside of function doesn't work.
-
