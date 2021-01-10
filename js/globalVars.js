@@ -5,7 +5,7 @@ $('#juanma-profile-photo').tooltip();
 const inflation12m = globalVars[0].inflation12m;
 const blueDollar12m = globalVars[1].blueDollar12m;
 const blueDollarToday = globalVars[2].blueDollarToday;
-const oficialDollarToday = globalVars[3].oficialDollarToday;
+const officialDollarToday = globalVars[3].officialDollarToday;
 const oficialDollar12m = globalVars[4].oficialDollar12m;
 const dollarTax = globalVars[5].dollarTax;
 
@@ -13,7 +13,7 @@ const dollarTax = globalVars[5].dollarTax;
 console.log(inflation12m);
 console.log(blueDollar12m);
 console.log(blueDollarToday);
-console.log(oficialDollarToday);
+console.log(officialDollarToday);
 console.log(oficialDollar12m);
 console.log(dollarTax);
 
