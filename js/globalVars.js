@@ -2,12 +2,12 @@
 $('#juanma-profile-photo').tooltip();
 
 //Global vars from data
-const inflation12m = globalVars[0].inflation12m;
-const blueDollar12m = globalVars[1].blueDollar12m;
-const blueDollarToday = globalVars[2].blueDollarToday;
-const officialDollarToday = globalVars[3].officialDollarToday;
-const officialDollar12m = globalVars[4].officialDollar12m;
-const dollarTax = globalVars[5].dollarTax;
+const inflation12m = globalVars[0].inflation12m; 
+const officialDollar12m = globalVars[1].officialDollar12m;
+const blueDollar12m = globalVars[2].blueDollar12m;
+const dollarTax = globalVars[3].dollarTax;
+const officialDollarToday = globalVars[4].officialDollarToday;
+const blueDollarToday = globalVars[5].blueDollarToday;
 
 //TEST
 console.log(inflation12m);
@@ -16,7 +16,6 @@ console.log(blueDollarToday);
 console.log(officialDollarToday);
 console.log(officialDollar12m);
 console.log(dollarTax);
-
 
 //Investment Assets new Objects
 let plazoFijoTradicionalSupervielle = new InvestmentAsset( //MANUAL

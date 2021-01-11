@@ -2,15 +2,15 @@
 const globalVars = [{
     "inflation12m":52.5 //MANUAL
   }, { 
+    "officialDollar12m":121.1 //MANUAL
+  }, { 
     "blueDollar12m":212.4 //MANUAL
   }, { 
-    "blueDollarToday":144
+    "dollarTax":1.65 //MANUAL
   }, { 
     "officialDollarToday":82.1
   }, { 
-    "officialDollar12m":121.1 //MANUAL
-  }, { 
-    "dollarTax":1.65 //MANUAL
+    "blueDollarToday":144
   }
 ]; 
 
