@@ -18,12 +18,12 @@ const globalVars = [{
 const dollarValues = function(){
     $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", 
     function(posts){
-      const officialDollarAPI = { officialDollarAPI: parseFloat(posts[0].casa.venta.replace(',', '.')) };
-      const blueDollarAPI = { blueDollarAPI: parseFloat(posts[1].casa.venta.replace(',', '.')) };
-      globalVars.push(officialDollarAPI, blueDollarAPI);
+      const officialDollarToday = { officialDollarToday: parseFloat(posts[0].casa.venta.replace(',', '.')) };
+      const blueDollarToday = { blueDollarToday: parseFloat(posts[1].casa.venta.replace(',', '.')) };
+      globalVars.push(officialDollarToday, blueDollarToday);
       console.log(globalVars);
-      console.log(officialDollarAPI);
-      console.log(blueDollarAPI);
+      console.log(officialDollarToday);
+      console.log(blueDollarToday);
     })
 };
 
