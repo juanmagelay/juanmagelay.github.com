@@ -5,17 +5,14 @@ $('#juanma-profile-photo').tooltip();
 function dollarValuesFromAPI() {
     //TEST
     console.log("The old value of official dollar is: " + officialDollarToday);
-    console.log("The old value of blue dollar is: " + blueDollarToday);
     //Dollar values
     officialDollarToday = globalVars[4].officialDollarToday;
     blueDollarToday = globalVars[5].blueDollarToday;
     //TEST
     console.log("The new value of official dollar is: " + officialDollarToday);
-    console.log("The new value of blue dollar is: " + blueDollarToday);
 
     //TEST
     console.log("The old value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
-    console.log("The old value of compra dollar is: " + compraDeDolaresOficiales.annualYield);
     //Investment assets in dollars
     ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
         "Rulo dólar oficial", 
@@ -35,7 +32,39 @@ function dollarValuesFromAPI() {
     );
     //TEST
     console.log("The new value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
-    console.log("The new value of compra dollar is: " + compraDeDolaresOficiales.annualYield);
+
+    //Sort of annualYields
+    annualYields = [
+        plazoFijoTradicionalSupervielle.annualYield, 
+        plazoFijoTradicionalBrubank.annualYield,
+        plazoFijoTradicionalReba.annualYield,
+        plazoFijoTradicionalWilobank.annualYield,
+        plazoFijoUVASupervielle.annualYield, 
+        fondoSupervielle.annualYield, 
+        fondoMercadoPago.annualYield,
+        ruloConDolaresOficiales.annualYield,
+        compraDeDolaresOficiales.annualYield,
+        compraDeUsdc.annualYield
+    ];
+    annualYieldRanking();
+
+    //Sort of InvestmentAssets by AnnualYields - AKA Top 10 Investment Assets
+    investmentAssets = [
+        plazoFijoTradicionalSupervielle, 
+        plazoFijoTradicionalBrubank,
+        plazoFijoTradicionalReba,
+        plazoFijoTradicionalWilobank,
+        plazoFijoUVASupervielle, 
+        fondoSupervielle, 
+        fondoMercadoPago,
+        ruloConDolaresOficiales,
+        compraDeDolaresOficiales,
+        compraDeUsdc
+    ];
+    investmentAssetsRankingByAnuualYields();
+
+
+
 } 
 
 //Global vars from data
@@ -129,7 +158,6 @@ let compraDeUsdc = new InvestmentAsset( //MANUAL
 );
 //TEST
 console.log(plazoFijoTradicionalSupervielle);
-console.log(plazoFijoUVASupervielle);
 console.log(plazoFijoTradicionalSupervielle.annualYield);
 
 
