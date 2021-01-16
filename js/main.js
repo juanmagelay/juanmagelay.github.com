@@ -7,6 +7,65 @@ $("#human").animate( {"left": "15%"}, 800, "swing", () => {
     $("#plant").animate( {"opacity": "1"}, 200, "linear" );
 });
 
+//Updating dollar values in main (HTML)
+function updateValuesInIndexPage(){
+    
+    //Mejores inversiones - Best investment assets - HTML Manipulate
+    //AssetNames and EntityNames
+    //1
+    investmentAssetName1 = investmentAssets[0].assetName;
+    investmentEntityName1 = investmentAssets[0].entityName;
+    bestInvestmentAssetName1 = document.getElementById("mejores-inversiones-1-asset-name").innerHTML = (investmentAssetName1 + " " + investmentEntityName1);
+    //2
+    investmentAssetName2 = investmentAssets[1].assetName;
+    investmentEntityName2 = investmentAssets[1].entityName;
+    bestInvestmentAssetName2 = document.getElementById("mejores-inversiones-2-asset-name").innerHTML = (investmentAssetName2 + " " + investmentEntityName2);
+    //3
+    investmentAssetName3 = investmentAssets[2].assetName;
+    investmentEntityName3 = investmentAssets[2].entityName;
+    bestInvestmentAssetName3 = document.getElementById("mejores-inversiones-3-asset-name").innerHTML = (investmentAssetName3 + " " + investmentEntityName3);
+    //AnnualYields
+    //1
+    investmentAssetAnnualYield1 = investmentAssets[0].annualYield;
+    bestInvestmentAssetAnnualYield1 = document.getElementById("mejores-inversiones-1-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield1))+"%");
+    //2
+    investmentAssetAnnualYield2 = investmentAssets[1].annualYield;
+    bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversiones-2-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield2))+"%");
+    //3
+    investmentAssetAnnualYield3 = investmentAssets[2].annualYield;
+    bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield3))+"%");
+
+    //Estrategia sugerida para invertir - Suggested strategy for invest - HTML Manipulate
+    //Three elements to invest
+    //PercentajeOfInvestment
+    //1
+    suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
+    //2
+    suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (28+"%");
+    //3
+    suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (47+"%");
+    //AssetNames
+    //1
+    suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
+    //2
+    suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
+    //3
+    suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
+    //TotalMoney
+    //1
+    suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.25))); //MANUAL
+    //2
+    suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.28))); //MANUAL
+    //3
+    suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.47))); //MANUAL
+    //Total Annual Yield
+    //TotalAnnualYield
+    totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
+    //TotalAnnualMoney
+    totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated()))));
+
+}
+
 //Mejores inversiones - Best investment assets - HTML Manipulate
 //AssetNames and EntityNames
 //1
@@ -31,6 +90,7 @@ let bestInvestmentAssetAnnualYield2 = document.getElementById("mejores-inversion
 //3
 let investmentAssetAnnualYield3 = investmentAssets[2].annualYield;
 let bestInvestmentAssetAnnualYield3 = document.getElementById("mejores-inversiones-3-annual-yield").innerHTML = ((percentageFormat(investmentAssetAnnualYield3))+"%");
+
 //Percentage number with comma
 function percentageFormat(percentageNumber) {
     return (
