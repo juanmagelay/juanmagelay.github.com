@@ -1,21 +1,50 @@
 //Tooltip
 $('#juanma-profile-photo').tooltip();
 
-//Global vars from data
-const inflation12m = globalVars[0].inflation12m; 
-const officialDollar12m = globalVars[1].officialDollar12m;
-const blueDollar12m = globalVars[2].blueDollar12m;
-const dollarTax = globalVars[3].dollarTax;
-const officialDollarToday = globalVars[4].officialDollarToday;
-const blueDollarToday = globalVars[5].blueDollarToday;
+//Updating dollar values from API
+function dollarValuesFromAPI() {
+    //TEST
+    console.log("The old value of official dollar is: " + officialDollarToday);
+    console.log("The old value of blue dollar is: " + blueDollarToday);
+    //Dollar values
+    officialDollarToday = globalVars[4].officialDollarToday;
+    blueDollarToday = globalVars[5].blueDollarToday;
+    //TEST
+    console.log("The new value of official dollar is: " + officialDollarToday);
+    console.log("The new value of blue dollar is: " + blueDollarToday);
 
-//TEST
-console.log(inflation12m);
-console.log(blueDollar12m);
-console.log(blueDollarToday);
-console.log(officialDollarToday);
-console.log(officialDollar12m);
-console.log(dollarTax);
+    //TEST
+    console.log("The old value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
+    console.log("The old value of compra dollar is: " + compraDeDolaresOficiales.annualYield);
+    //Investment assets in dollars
+    ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
+        "Rulo dólar oficial", 
+        ((blueDollar12m / blueDollarToday) * blueDollarToday) / (officialDollarToday * dollarTax), 
+        "", 
+        "Casas de cambio", 
+        "Rulos con dólares", 
+        "Dólares"
+    );
+    compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
+        "Dólar oficial", 
+        officialDollar12m / (officialDollarToday * dollarTax), 
+        "un banco", 
+        "Bancos tradicionales", 
+        "Rulos con dólares", 
+        "Dólares"
+    );
+    //TEST
+    console.log("The new value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
+    console.log("The new value of compra dollar is: " + compraDeDolaresOficiales.annualYield);
+} 
+
+//Global vars from data
+let inflation12m = globalVars[0].inflation12m; 
+let officialDollar12m = globalVars[1].officialDollar12m;
+let blueDollar12m = globalVars[2].blueDollar12m;
+let dollarTax = globalVars[3].dollarTax;
+let officialDollarToday = globalVars[4].officialDollarToday;
+let blueDollarToday = globalVars[5].blueDollarToday;
 
 //Investment Assets new Objects
 let plazoFijoTradicionalSupervielle = new InvestmentAsset( //MANUAL

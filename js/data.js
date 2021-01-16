@@ -22,5 +22,9 @@ $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales",
       const blueDollarToday = { blueDollarToday: parseFloat(posts[1].casa.venta.replace(',', '.')) };
       globalVars.splice(4,2,officialDollarToday, blueDollarToday)
       console.log(globalVars);
+      //Updating dollar values in main
+
+      //Updating dollar values in globalVars
+      dollarValuesFromAPI();
     })
 

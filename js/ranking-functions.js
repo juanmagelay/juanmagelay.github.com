@@ -27,7 +27,7 @@ generateOutput(investmentAssets);
 //Percentage number with comma
 function percentageFormat(percentageNumber) {
     return (
-        percentageNumber.toFixed(1).replace('.', ',')
+        percentageNumber.toFixed(2).replace('.', ',')
     ) 
 }
 
