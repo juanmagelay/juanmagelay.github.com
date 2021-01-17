@@ -33,6 +33,8 @@ $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales",
         console.log("Keep calm, this is index.");
       } else if ( location.pathname.split('/').pop() == "ranking.html" ) {
         generateOutput(investmentAssets);
+        showOnlyInvestmentAssetsInDollars();
+        showOnlyInvestmentAssetsInPesos();
         console.log("Keep calm, this is ranking.");
       } else if ( location.pathname.split('/').pop() == "strategy.html" ) {
         console.log("Keep calm, this is strategy.");
