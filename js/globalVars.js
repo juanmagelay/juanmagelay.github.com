@@ -25,7 +25,7 @@ function dollarValuesFromAPI() {
     compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
         "Dólar oficial", 
         officialDollar12m / (officialDollarToday * dollarTax), 
-        "un banco", 
+        "", 
         "Bancos tradicionales", 
         "Rulos con dólares", 
         "Dólares"
@@ -126,7 +126,7 @@ let fondoSupervielle = new InvestmentAsset( //MANUAL
 );
 let fondoMercadoPago = new InvestmentAsset( //MANUAL
     "Fondo", 
-    27.2, 
+    28.9, 
     "Mercado Pago", 
     "Billeteras", 
     "Fondo", 

@@ -22,8 +22,6 @@ function generateOutput(listOfInvestmentAssets){
     console.log("The main function works");
 }
 
-generateOutput(investmentAssets);
-
 //Percentage number with comma
 function percentageFormat(percentageNumber) {
     return (

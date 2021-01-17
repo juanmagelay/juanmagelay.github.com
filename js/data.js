@@ -27,6 +27,15 @@ $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales",
       dollarValuesFromAPI();
 
       //Updating dollar values in main (HTML)
-      updateValuesInIndexPage();
+      if ( location.pathname.split('/').pop() == "" || 
+           location.pathname.split('/').pop() == "index.html" ) {
+        updateValuesInIndexPage();  
+        console.log("Keep calm, this is index.");
+      } else if ( location.pathname.split('/').pop() == "ranking.html" ) {
+        generateOutput(investmentAssets);
+        console.log("Keep calm, this is ranking.");
+      } else if ( location.pathname.split('/').pop() == "strategy.html" ) {
+        console.log("Keep calm, this is strategy.");
+      }
     })
 
