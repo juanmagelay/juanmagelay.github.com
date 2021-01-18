@@ -19,7 +19,7 @@ function filterEvent(){
         generateOutput(investmentAssets);
     } else if ((checkboxesChecked.includes("defaultChecked1") == false) && 
         (checkboxesChecked.includes("defaultChecked2") == false)) {
-        alert("Elegí al menos una moneda de inversión, porque Yuanes todavía no soportamos. Patacones tampoco.");
+        document.getElementById("alert-currency").style.display = "block";
     } else if (checkboxesChecked.includes("defaultChecked1") == false) {
         generateOutput(onlyInvestmentAssetsInDollars);
     } else if (checkboxesChecked.includes("defaultChecked2") == false) {
