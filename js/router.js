@@ -6,12 +6,14 @@ const routes = [
 ];
 
 const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';
+console.log(parseLocation);
 const findComponentByPath = (path, routes) => routes.find(r => r.path == path || undefined);
 
 const router = () => {
   const path = parseLocation(); 
   const { component = ErrorComponent } = findComponentByPath(path, routes) || {}; 
   //VER SI FALTA ALGO
+  $('#app').html(component.render());
 }
 
 $( window ).on( 'load', function()  {
@@ -22,7 +24,7 @@ $( window ).on( 'hashchange', function( e ) {
     router();
 } );
 
-
+/*
 
 //JSON
 const globalVars = [{
@@ -66,4 +68,4 @@ $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales",
         console.log("Keep calm, this is strategy.");
       }
     })
-
+*/

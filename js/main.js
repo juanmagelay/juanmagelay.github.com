@@ -273,6 +273,13 @@ const ExpensesComponent = {
     }
 }
 
+const ErrorComponent = {
+    render: () => {
+      return `
+        <p>Error 404</p>
+      `;
+    }
+}
 
 
 //Splash
@@ -283,7 +290,7 @@ setTimeout( function() {
 $("#human").animate( {"left": "15%"}, 800, "swing", () => {
     $("#plant").animate( {"opacity": "1"}, 200, "linear" );
 });
-
+/*
 //Updating dollar values in main (HTML)
 function updateValuesInIndexPage(){
     
@@ -434,3 +441,5 @@ document.getElementById("interested-in-supervielle").addEventListener("click", l
 function logTheInterestInMercadoPago() {
     console.log("Interested in Mercado Pago");
 }
+
+*/
