@@ -276,7 +276,23 @@ const ExpensesComponent = {
 const ErrorComponent = {
     render: () => {
       return `
-        <p>Error 404</p>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                <!--  Card  -->
+                <div class="home-list container col-md-6 col-xl-5 card-filled">
+                    <h1>Gastos</h1>
+                    <div class="card justify-content-center ">
+                        <div class="card-body">
+                            <h3>Ouch! Esta sección no existe</h3>
+                            <p>Presioná sobre el logo de Cuotify para ir a un lugar mejor.</p>
+                            <div class="text-center">
+                                <i class="fas fa-bomb"></i>
+                            </div>
+                        </div>					
+                    </div>
+                </div>
+            </div>
+        </div>
       `;
     }
 }
