@@ -30,7 +30,7 @@ const IndexComponent = {
                                 </div>
                             </li>
                         </ul>
-                        <a href="ranking.html" class="btn btn-primary btn-lg btn-block" role="button" id="view-all-button">Ver todas las inversiones
+                        <a href="#/ranking" class="btn btn-primary btn-lg btn-block" role="button" id="view-all-button">Ver todas las inversiones
                         </a>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ const IndexComponent = {
                                 </div>
                             </li>
                         </ul>
-                        <a href="strategy.html" class="btn btn-primary btn-lg btn-block" role="button">Simular una inversión
+                        <a href="#/strategy" class="btn btn-primary btn-lg btn-block" role="button">Simular una inversión
                         </a>
                     </div>
                 </div>

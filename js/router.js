@@ -1,3 +1,12 @@
+const routes = [
+  { path: '/',          component: IndexComponent, },
+  { path: '/strategy',  component: StrategyComponent, },
+  { path: '/ranking',   component: RankingComponent, },
+  { path: '/expenses',  component: ExpensesComponent, },
+];
+
+
+
 //JSON
 const globalVars = [{
     "inflation12m":52.5 //MANUAL
