@@ -16,6 +16,7 @@ const router = () => {
   $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", () => {
     //console.log(component.render());  
     $('#app').html(component.render());
+    component.events();
   })
   
 }
