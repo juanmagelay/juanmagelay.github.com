@@ -13,7 +13,11 @@ const router = () => {
   const path = parseLocation(); 
   const { component = ErrorComponent } = findComponentByPath(path, routes) || {}; 
   //VER SI FALTA ALGO
-  $('#app').html(component.render());
+  $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", () => {
+    //console.log(component.render());  
+    $('#app').html(component.render());
+  })
+  
 }
 
 $( window ).on( 'load', function()  {
