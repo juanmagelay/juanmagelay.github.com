@@ -145,6 +145,16 @@ const IndexComponent = {
         //TotalAnnualMoney
         let totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated()))));
 
+        function(posts) {
+            console.log("Obtained data from API", posts)
+            const officialDollarToday = { officialDollarToday: parseFloat(posts[0].casa.venta.replace(',', '.')) };
+            const blueDollarToday = { blueDollarToday: parseFloat(posts[1].casa.venta.replace(',', '.')) };
+            globalVars.splice(4,2,officialDollarToday, blueDollarToday)
+            console.log(globalVars);
+        
+            //Updating dollar values in globalVars
+            dollarValuesFromAPI();
+        }
     }
 }
 
@@ -459,3 +469,209 @@ function logTheInterestInMercadoPago() {
     console.log("Interested in Mercado Pago");
 }
 
+//Tooltip
+$('#juanma-profile-photo').tooltip();
+
+//Updating dollar values from API
+function dollarValuesFromAPI() {
+    //TEST
+    console.log("The old value of official dollar is: " + officialDollarToday);
+    //Dollar values
+    officialDollarToday = globalVars[4].officialDollarToday;
+    blueDollarToday = globalVars[5].blueDollarToday;
+    //TEST
+    console.log("The new value of official dollar is: " + officialDollarToday);
+
+    //TEST
+    console.log("The old value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
+    //Investment assets in dollars
+    ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
+        "Rulo dólar oficial", 
+        ((blueDollar12m / blueDollarToday) * blueDollarToday) / (officialDollarToday * dollarTax), 
+        "", 
+        "Casas de cambio", 
+        "Rulos con dólares", 
+        "Dólares"
+    );
+    compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
+        "Dólar oficial", 
+        officialDollar12m / (officialDollarToday * dollarTax), 
+        "", 
+        "Bancos tradicionales", 
+        "Rulos con dólares", 
+        "Dólares"
+    );
+    //TEST
+    console.log("The new value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
+
+    //Sort of annualYields
+    annualYields = [
+        plazoFijoTradicionalSupervielle.annualYield, 
+        plazoFijoTradicionalBrubank.annualYield,
+        plazoFijoTradicionalReba.annualYield,
+        plazoFijoTradicionalWilobank.annualYield,
+        plazoFijoUVASupervielle.annualYield, 
+        fondoSupervielle.annualYield, 
+        fondoMercadoPago.annualYield,
+        ruloConDolaresOficiales.annualYield,
+        compraDeDolaresOficiales.annualYield,
+        compraDeUsdc.annualYield
+    ];
+    annualYieldRanking();
+
+    //Sort of InvestmentAssets by AnnualYields - AKA Top 10 Investment Assets
+    investmentAssets = [
+        plazoFijoTradicionalSupervielle, 
+        plazoFijoTradicionalBrubank,
+        plazoFijoTradicionalReba,
+        plazoFijoTradicionalWilobank,
+        plazoFijoUVASupervielle, 
+        fondoSupervielle, 
+        fondoMercadoPago,
+        ruloConDolaresOficiales,
+        compraDeDolaresOficiales,
+        compraDeUsdc
+    ];
+    investmentAssetsRankingByAnuualYields();
+} 
+
+//Global vars from data
+let inflation12m = globalVars[0].inflation12m; 
+let officialDollar12m = globalVars[1].officialDollar12m;
+let blueDollar12m = globalVars[2].blueDollar12m;
+let dollarTax = globalVars[3].dollarTax;
+let officialDollarToday = globalVars[4].officialDollarToday;
+let blueDollarToday = globalVars[5].blueDollarToday;
+
+//Investment Assets new Objects
+let plazoFijoTradicionalSupervielle = new InvestmentAsset( //MANUAL
+    "Plazo fijo", 
+    37, 
+    "Supervielle", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
+let plazoFijoTradicionalBrubank = new InvestmentAsset( //MANUAL
+    "Plazo fijo", 
+    37, 
+    "Brubank", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
+let plazoFijoTradicionalReba = new InvestmentAsset( //MANUAL
+    "Plazo fijo", 
+    38.5, 
+    "Reba", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
+let plazoFijoTradicionalWilobank = new InvestmentAsset( //MANUAL
+    "Plazo fijo", 
+    37, 
+    "Wilobank", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
+let plazoFijoUVASupervielle = new InvestmentAsset( //MANUAL
+    "Plazo fijo UVA", 
+    1+inflation12m, 
+    "Supervielle", 
+    "Bancos tradicionales", 
+    "Plazo fijo", 
+    "Pesos"
+);
+let fondoSupervielle = new InvestmentAsset( //MANUAL
+    "Fondo", 
+    38.3, 
+    "Supervielle", 
+    "Bancos tradicionales", 
+    "Fondo", 
+    "Pesos"
+);
+let fondoMercadoPago = new InvestmentAsset( //MANUAL
+    "Fondo", 
+    28.9, 
+    "Mercado Pago", 
+    "Billeteras", 
+    "Fondo", 
+    "Pesos"
+);
+let ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
+    "Rulo dólar oficial", 
+    ((blueDollar12m / blueDollarToday) * blueDollarToday) / (88 * dollarTax), 
+    "", 
+    "Casas de cambio", 
+    "Rulos con dólares", 
+    "Dólares"
+);
+let compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
+    "Dólar oficial", 
+    officialDollar12m / (88 * dollarTax), 
+    "Supervielle", 
+    "Bancos tradicionales", 
+    "Rulos con dólares", 
+    "Dólares"
+);
+let compraDeUsdc = new InvestmentAsset( //MANUAL
+    "Dólar virtual", 
+    1.4, 
+    "Ripio", 
+    "Cripto billeteras", 
+    "Cripto monedas", 
+    "Pesos"
+);
+//TEST
+console.log(plazoFijoTradicionalSupervielle);
+console.log(plazoFijoTradicionalSupervielle.annualYield);
+
+
+//Sort of annualYields
+let annualYields = [
+    plazoFijoTradicionalSupervielle.annualYield, 
+    plazoFijoTradicionalBrubank.annualYield,
+    plazoFijoTradicionalReba.annualYield,
+    plazoFijoTradicionalWilobank.annualYield,
+    plazoFijoUVASupervielle.annualYield, 
+    fondoSupervielle.annualYield, 
+    fondoMercadoPago.annualYield,
+    ruloConDolaresOficiales.annualYield,
+    compraDeDolaresOficiales.annualYield,
+    compraDeUsdc.annualYield
+];
+
+function annualYieldRanking() {
+    annualYields.sort( function(a, b) {
+        return b - a;
+    });
+    console.table(annualYields);
+}
+
+annualYieldRanking();
+
+
+//Sort of InvestmentAssets by AnnualYields - AKA Top 10 Investment Assets
+let investmentAssets = [
+    plazoFijoTradicionalSupervielle, 
+    plazoFijoTradicionalBrubank,
+    plazoFijoTradicionalReba,
+    plazoFijoTradicionalWilobank,
+    plazoFijoUVASupervielle, 
+    fondoSupervielle, 
+    fondoMercadoPago,
+    ruloConDolaresOficiales,
+    compraDeDolaresOficiales,
+    compraDeUsdc
+];
+
+function investmentAssetsRankingByAnuualYields() {
+    investmentAssets.sort(function (a, b) {
+        return b.annualYield - a.annualYield;
+    });
+    console.table(investmentAssets);
+}
+
+investmentAssetsRankingByAnuualYields();
