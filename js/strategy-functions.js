@@ -1,3 +1,4 @@
+
 //Estrategia sugerida para invertir - Suggested strategy for invest - HTML Manipulate
 //Three elements to invest
 //PercentajeOfInvestment

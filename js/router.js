@@ -15,10 +15,10 @@ const router = () => {
   //VER SI FALTA ALGO
   $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", () => {
     //console.log(component.render());  
-    $('#app').html(component.render());
-    component.events();
+    dollarValuesFromAPI();
+	  $('#app').html(component.render());
+	  component.events();
   })
-  
 }
 
 $( window ).on( 'load', function()  {
@@ -30,22 +30,6 @@ $( window ).on( 'hashchange', function( e ) {
 } );
 
 /*
-
-//JSON
-const globalVars = [{
-    "inflation12m":52.5 //MANUAL
-  }, { 
-    "officialDollar12m":121.1 //MANUAL
-  }, { 
-    "blueDollar12m":212.4 //MANUAL
-  }, { 
-    "dollarTax":1.65 //MANUAL
-  }, { 
-    "officialDollarToday":82.1
-  }, { 
-    "blueDollarToday":144
-  }
-]; 
 
 //Dollar values obtained by API
 $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", 
