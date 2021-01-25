@@ -144,15 +144,17 @@ const IndexComponent = {
         let totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
         //TotalAnnualMoney
         let totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((totalMoneyCalculated()))));
-
-        function(posts) {
-            console.log("Obtained data from API", posts)
-            const officialDollarToday = { officialDollarToday: parseFloat(posts[0].casa.venta.replace(',', '.')) };
-            const blueDollarToday = { blueDollarToday: parseFloat(posts[1].casa.venta.replace(',', '.')) };
-            globalVars.splice(4,2,officialDollarToday, blueDollarToday)
-            console.log(globalVars);
-        }
+        
+        dataFromAPI(posts);
     }
+}
+
+function dataFromAPI(posts) {
+    console.log("Obtained data from API", posts)
+    const officialDollarToday = { officialDollarToday: parseFloat(posts[0].casa.venta.replace(',', '.')) };
+    const blueDollarToday = { blueDollarToday: parseFloat(posts[1].casa.venta.replace(',', '.')) };
+    globalVars.splice(4,2,officialDollarToday, blueDollarToday)
+    console.log(globalVars);
 }
 
 const StrategyComponent = {
@@ -468,35 +470,3 @@ function logTheInterestInMercadoPago() {
 
 //Tooltip
 $('#juanma-profile-photo').tooltip();
-
-//Updating dollar values from API
-function dollarValuesFromAPI() {
-    //TEST
-    console.log("The old value of official dollar is: " + officialDollarToday);
-    //Dollar values
-    officialDollarToday = globalVars[4].officialDollarToday;
-    blueDollarToday = globalVars[5].blueDollarToday;
-    //TEST
-    console.log("The new value of official dollar is: " + officialDollarToday);
-
-    //TEST
-    console.log("The old value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
-    //Investment assets in dollars
-    ruloConDolaresOficiales = new InvestmentAsset( //MANUAL
-        "Rulo dólar oficial", 
-        ((blueDollar12m / blueDollarToday) * blueDollarToday) / (officialDollarToday * dollarTax), 
-        "", 
-        "Casas de cambio", 
-        "Rulos con dólares", 
-        "Dólares"
-    );
-    compraDeDolaresOficiales = new InvestmentAsset( //MANUAL
-        "Dólar oficial", 
-        officialDollar12m / (officialDollarToday * dollarTax), 
-        "", 
-        "Bancos tradicionales", 
-        "Rulos con dólares", 
-        "Dólares"
-    );
-    //TEST
-    console.log("The new value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
