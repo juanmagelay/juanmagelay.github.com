@@ -147,19 +147,6 @@ const IndexComponent = {
     }
 }
 
-/*
-function dataFromAPI(posts) {
-    console.log("Obtained data from API", posts)
-    //const officialDollarToday = { officialDollarToday: parseFloat(posts[0].casa.venta.replace(',', '.')) };
-    const officialDollarToday = { officialDollarToday: 40 };
-    //const blueDollarToday = { blueDollarToday: parseFloat(posts[1].casa.venta.replace(',', '.')) };
-    const blueDollarToday = { blueDollarToday: 50 };
-    globalVars.splice(4,2,officialDollarToday, blueDollarToday)
-    console.log(globalVars);
-    console.table(investmentAssets);
-}
-*/
-
 const StrategyComponent = {
     render: () => {
       return `

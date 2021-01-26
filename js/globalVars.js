@@ -14,9 +14,6 @@ const globalVars = [{
   }
 ]; 
 
-//Tooltip
-$('#juanma-profile-photo').tooltip();
-
 //Updating dollar values from API
 function dollarValuesFromAPI(APIresult) {
     //TEST
