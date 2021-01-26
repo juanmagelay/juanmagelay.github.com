@@ -161,7 +161,7 @@ const StrategyComponent = {
                 <form class="home-list container col-md-6 col-xl-5">
                     <div class="justify-content-center">
                         <ul class="list-group">
-                            <input class="strategy-form-input list-group-item form-control form-control-lg" id="strategy-amount" type="number" min="1" max="99999999" maxlength="8" placeholder="$100.000" autofocus>
+                            <input class="strategy-form-input list-group-item form-control form-control-lg" id="strategy-amount" type="number" min="1" max="99999999" maxlength="8" placeholder="$100.000">
                             <input class="strategy-form-input list-group-item form-control form-control-lg" id="strategy-days" type="number" min="1" max="999" maxlength="3" placeholder="30 días">
                             <a href="" class="btn btn-primary btn-lg btn-block" role="button" id="push-data">Calcular
                             </a>
@@ -209,6 +209,7 @@ const StrategyComponent = {
       `;
     },
     events: () => {
+        $("#strategy-amount").focus();
         updateValuesInStrategyPage()
         console.log(investmentAssets);
         let strategyAmount = document.getElementById("strategy-amount").onkeyup = amountValue;
