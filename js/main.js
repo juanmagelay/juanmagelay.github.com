@@ -35,9 +35,9 @@ const IndexComponent = {
                     </div>
                 </div>
 
-                <!--  Estretegia sugerida  -->
+                <!--  Estrategia sugerida  -->
                 <div class="home-list container col-md-6 col-xl-5">
-                    <h1>Estretegia sugerida para invertir $100.000</h1>
+                    <h1>Estrategia sugerida para invertir $100.000</h1>
                     <div class="card justify-content-center">
                         <ul class="list-group">
                             <li class="list-group-item rounded d-flex">
@@ -166,7 +166,7 @@ const StrategyComponent = {
         <div class="container">
             <div class="title-and-filter row d-flex justify-content-between">
                 <div class="container col-md-6 col-xl-5">
-                    <h1>Estretegia sugerida</h1>
+                    <h1>Estrategia sugerida</h1>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2">
@@ -182,7 +182,7 @@ const StrategyComponent = {
                     </div>
                 </form>
 
-                <!--  Estretegia sugerida  -->
+                <!--  Estrategia sugerida  -->
                 <div class="home-list second-ranking-col container col-md-6 col-xl-5" id="strategy-container">
                     <div class="card justify-content-center">
                         <ul class="list-group">
