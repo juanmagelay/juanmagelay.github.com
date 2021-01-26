@@ -16,6 +16,7 @@ function filterEvent(){
     //Apply filter to the investmentAssets ranking
     if ((checkboxesChecked.includes("defaultChecked1") == true) && 
         (checkboxesChecked.includes("defaultChecked2") == true)) {
+        console.log("Se ven los 10?" + investmentAssets);
         generateOutput(investmentAssets);
     } else if ((checkboxesChecked.includes("defaultChecked1") == false) && 
         (checkboxesChecked.includes("defaultChecked2") == false)) {

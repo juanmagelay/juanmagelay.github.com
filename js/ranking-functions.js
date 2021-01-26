@@ -19,7 +19,7 @@ function generateOutput(listOfInvestmentAssets){
                 </li>`;  
     }
     father.innerHTML = inner;
-    console.log("The main function works");
+    console.log("The main function works" + listOfInvestmentAssets);
 }
 
 //Percentage number with comma

@@ -18,14 +18,21 @@ const globalVars = [{
 $('#juanma-profile-photo').tooltip();
 
 //Updating dollar values from API
-function dollarValuesFromAPI() {
+function dollarValuesFromAPI(resultadoAPI) {
     //TEST
     console.log("The old value of official dollar is: " + officialDollarToday);
-    //Dollar values
-    officialDollarToday = globalVars[4].officialDollarToday;
-    blueDollarToday = globalVars[5].blueDollarToday;
+    officialDollarToday = parseFloat(resultadoAPI[0].casa.venta.replace(',', '.'));
+    blueDollarToday = parseFloat(resultadoAPI[1].casa.venta.replace(',', '.'));
+
     //TEST
-    console.log("The new value of official dollar is: " + officialDollarToday);
+    console.log("The new value of official dollar is: " + officialDollarToday.officialDollarToday);
+    globalVars.splice(4,2,officialDollarToday, blueDollarToday)
+
+
+    //Dollar values
+    //officialDollarToday = globalVars[4].officialDollarToday;
+    //blueDollarToday = globalVars[5].blueDollarToday;
+
 
     //TEST
     console.log("The old value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);

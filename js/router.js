@@ -13,9 +13,9 @@ const router = () => {
   const path = parseLocation(); 
   const { component = ErrorComponent } = findComponentByPath(path, routes) || {}; 
   //VER SI FALTA ALGO
-  $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", () => {
+  $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", (resultadoAPI) => {
     //console.log(component.render());  
-    dollarValuesFromAPI();
+    dollarValuesFromAPI(resultadoAPI);
 	  $('#app').html(component.render());
 	  component.events();
   })
