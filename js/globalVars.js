@@ -252,7 +252,7 @@ function showOnlyInvestmentAssetsInDollars() {
     console.table(onlyInvestmentAssetsInDollars);
 }
 
-//ACA ESTABA showOnlyInvestmentAssetsInDollars();
+showOnlyInvestmentAssetsInDollars();
 
 var onlyInvestmentAssetsInPesos = [];
 //Filters - Investment assets in Pesos
@@ -268,7 +268,7 @@ function showOnlyInvestmentAssetsInPesos() {
     console.table(onlyInvestmentAssetsInPesos);
 }
 
-//ACA ESTABA showOnlyInvestmentAssetsInPesos();
+showOnlyInvestmentAssetsInPesos();
 
 
 //Filters - Investment asset Fixed term

@@ -207,6 +207,29 @@ const StrategyComponent = {
             </div>
         </div>
       `;
+    },
+    events: () => {
+        updateValuesInStrategyPage()
+        console.log(investmentAssets);
+        let strategyAmount = document.getElementById("strategy-amount").onkeyup = amountValue;
+        let strategyDays = document.getElementById("strategy-days").onkeyup = daysValue;
+        
+        //Get clicks on form
+        document.getElementById("strategy-amount").onclick = logTheInterestInChange;
+        document.getElementById("strategy-days").onclick = logTheInterestInChange;
+        
+        //From Calcular button
+        document.getElementById("push-data").onclick = strategyBasedOnAmountAndDays;
+
+        //From Enter & Tab key
+        $("form").on('keyup',function(e) {
+            if(e.which == 13) { //13 = Enter code
+                strategyBasedOnAmountAndDays(e);
+            } else if (e.which == 9) { //9 = Tab code
+                console.log("You are an advanced user.");
+                localStorage.setItem('UserType', 'Advanced');
+            }
+        });
     }
 }
 
@@ -256,7 +279,7 @@ const RankingComponent = {
                     </div>
                     -->
                     <div class="card justify-content-center">
-                        <a onclick="filterEvent();" class="after-filters btn btn-primary btn-lg btn-block" id="apply-filters" role="button">Aplicar filtros
+                        <a class="after-filters btn btn-primary btn-lg btn-block" id="apply-filters" role="button">Aplicar filtros
                         </a>						
                     </div>
                     <div class="alert alert-warning alert-dismissible fade show" id="alert-currency" role="alert">
@@ -314,6 +337,14 @@ const RankingComponent = {
             </div>
         </div>
       `;
+    },
+    events: () => {
+        generateOutput(investmentAssets);
+        console.log(investmentAssets);
+        filterEvent();
+        $("#apply-filters").click((e)=>{
+            filterEvent();
+        });
     }
 }
 
