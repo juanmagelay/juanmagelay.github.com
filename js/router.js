@@ -20,7 +20,9 @@ const router = () => {
     //console.log(component.render());  
     dollarValuesFromAPI(resultadoAPI);
 	  $('#app').html(component.render());
-	  component.events();
+    if("events" in component){
+      component.events();
+    }
   })
 }
 

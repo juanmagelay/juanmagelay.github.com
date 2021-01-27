@@ -240,6 +240,7 @@ investmentAssetstop5RankingByAnuualYields();
 var onlyInvestmentAssetsInDollars = [];
 //Filters - Investment assets in Dollars
 function showOnlyInvestmentAssetsInDollars() {
+    onlyInvestmentAssetsInDollars = [];
     let onlyDollars = "Dólares";
     for (let investmentAsset of investmentAssets) {
         for(let assetCurrency in investmentAsset){
