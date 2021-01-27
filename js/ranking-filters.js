@@ -20,7 +20,6 @@ function filterEvent(){
     } else if ((checkboxesChecked.includes("defaultChecked1") == false) && 
         (checkboxesChecked.includes("defaultChecked2") == false)) {
         document.getElementById("alert-currency").style.display = "block";
-        generateOutput([]);
     } else if (checkboxesChecked.includes("defaultChecked1") == false) {
         generateOutput(onlyInvestmentAssetsInDollars);
     } else if (checkboxesChecked.includes("defaultChecked2") == false) {
