@@ -231,6 +231,10 @@ h2 {
 		margin-left: 5px;
 	}
 
+	#second-footer {
+		visibility: hidden;
+	}
+
 	#juanma-profile-photo {
 		height: 65px;
 	}

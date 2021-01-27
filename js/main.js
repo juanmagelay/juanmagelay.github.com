@@ -497,3 +497,14 @@ $('#juanma-profile-photo').tooltip();
 function showLogLowPriority(aMessage) {
     console.log(aMessage);
 }
+
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+        document.getElementById('second-footer').style.visibility = "visible";
+   } else {
+    document.getElementById('second-footer').style.visibility = "hidden";
+   }
+   lastScrollTop = st;
+});
