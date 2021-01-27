@@ -370,6 +370,12 @@ const ExpensesComponent = {
             </div>
         </div>
       `;
+    },
+    events: () => {
+        document.getElementById("expenses-option-mobile").classList.add('active');
+        document.getElementById("expenses-option-web").classList.add('active');
+        document.getElementById("investments-option-mobile").classList.remove('active');
+        document.getElementById("investments-option-web").classList.remove('active');
     }
 }
 
