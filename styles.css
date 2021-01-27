@@ -61,6 +61,10 @@ h2 {
 	font-size: 18px;
 }
 
+.navbar .col .navbar-nav .nav-item .nav-link:hover, .nav-link:active {
+	color: #3626A7;
+}
+
 .navbar .col .navbar-nav .active .nav-link {
 	color: #3626A7;
 }
@@ -81,7 +85,7 @@ h2 {
 	font-weight: bold;
 }
 
-.card-filled .card .card-body .fa-money-bill{
+.card-filled .card .card-body .fas{
 	font-size: 50px;
 }
 
@@ -225,6 +229,10 @@ h2 {
 	.footer .social-media a {
 		margin-right: 5px;
 		margin-left: 5px;
+	}
+
+	#second-footer {
+		visibility: hidden;
 	}
 
 	#juanma-profile-photo {

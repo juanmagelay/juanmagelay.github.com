@@ -1,15 +1,35 @@
-//Tooltip
-$('#juanma-profile-photo').tooltip();
+//JSON
+const globalVars = [{
+    "inflation12m":52.5 //MANUAL
+  }, { 
+    "officialDollar12m":121.1 //MANUAL
+  }, { 
+    "blueDollar12m":212.4 //MANUAL
+  }, { 
+    "dollarTax":1.65 //MANUAL
+  }, { 
+    "officialDollarToday":82.1
+  }, { 
+    "blueDollarToday":144
+  }
+]; 
 
 //Updating dollar values from API
-function dollarValuesFromAPI() {
+function dollarValuesFromAPI(APIresult) {
     //TEST
     console.log("The old value of official dollar is: " + officialDollarToday);
-    //Dollar values
+    
+    officialDollarToday = { officialDollarToday: parseFloat(APIresult[0].casa.venta.replace(',', '.')) };
+    blueDollarToday = { blueDollarToday: parseFloat(APIresult[1].casa.venta.replace(',', '.')) };
+    globalVars.splice(4,2,officialDollarToday, blueDollarToday)
     officialDollarToday = globalVars[4].officialDollarToday;
     blueDollarToday = globalVars[5].blueDollarToday;
+    
     //TEST
+    console.log("VER");
+    console.log(globalVars);
     console.log("The new value of official dollar is: " + officialDollarToday);
+    console.log("The old value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
 
     //TEST
     console.log("The old value of rulo in dollars is: " + ruloConDolaresOficiales.annualYield);
@@ -63,8 +83,7 @@ function dollarValuesFromAPI() {
     ];
     investmentAssetsRankingByAnuualYields();
 
-
-
+    showOnlyInvestmentAssetsInDollars();
 } 
 
 //Global vars from data
@@ -221,6 +240,7 @@ investmentAssetstop5RankingByAnuualYields();
 var onlyInvestmentAssetsInDollars = [];
 //Filters - Investment assets in Dollars
 function showOnlyInvestmentAssetsInDollars() {
+    onlyInvestmentAssetsInDollars = [];
     let onlyDollars = "Dólares";
     for (let investmentAsset of investmentAssets) {
         for(let assetCurrency in investmentAsset){
@@ -231,8 +251,6 @@ function showOnlyInvestmentAssetsInDollars() {
     }
     console.table(onlyInvestmentAssetsInDollars);
 }
-
-//ACA ESTABA showOnlyInvestmentAssetsInDollars();
 
 var onlyInvestmentAssetsInPesos = [];
 //Filters - Investment assets in Pesos
@@ -248,7 +266,7 @@ function showOnlyInvestmentAssetsInPesos() {
     console.table(onlyInvestmentAssetsInPesos);
 }
 
-//ACA ESTABA showOnlyInvestmentAssetsInPesos();
+showOnlyInvestmentAssetsInPesos();
 
 
 //Filters - Investment asset Fixed term
