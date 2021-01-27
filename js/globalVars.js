@@ -83,8 +83,7 @@ function dollarValuesFromAPI(APIresult) {
     ];
     investmentAssetsRankingByAnuualYields();
 
-
-
+    showOnlyInvestmentAssetsInDollars();
 } 
 
 //Global vars from data
@@ -251,8 +250,6 @@ function showOnlyInvestmentAssetsInDollars() {
     }
     console.table(onlyInvestmentAssetsInDollars);
 }
-
-showOnlyInvestmentAssetsInDollars();
 
 var onlyInvestmentAssetsInPesos = [];
 //Filters - Investment assets in Pesos

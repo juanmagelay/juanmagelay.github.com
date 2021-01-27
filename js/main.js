@@ -227,7 +227,7 @@ const StrategyComponent = {
             if(e.which == 13) { //13 = Enter code
                 strategyBasedOnAmountAndDays(e);
             } else if (e.which == 9) { //9 = Tab code
-                console.log("You are an advanced user.");
+                showLogLowPriority("You are an advanced user.");
                 localStorage.setItem('UserType', 'Advanced');
             }
         });
@@ -492,3 +492,8 @@ function logTheInterestInMercadoPago() {
 
 //Tooltip
 $('#juanma-profile-photo').tooltip();
+
+
+function showLogLowPriority(aMessage) {
+    console.log(aMessage);
+}
