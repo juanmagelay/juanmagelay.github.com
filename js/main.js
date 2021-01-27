@@ -508,9 +508,13 @@ var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
    if (st > lastScrollTop){
+    setTimeout(function() {
         document.getElementById('second-footer').style.visibility = "visible";
+    }, 500);
    } else {
-    document.getElementById('second-footer').style.visibility = "hidden";
+    setTimeout(function() {
+        document.getElementById('second-footer').style.visibility = "hidden";
+    }, 500);
    }
    lastScrollTop = st;
 });
