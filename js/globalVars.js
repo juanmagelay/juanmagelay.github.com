@@ -113,7 +113,7 @@ let plazoFijoTradicionalBrubank = new InvestmentAsset( //MANUAL
 );
 let plazoFijoTradicionalReba = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
-    38.5, 
+    38, 
     "Reba", 
     "Bancos tradicionales", 
     "Plazo fijo", 
