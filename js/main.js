@@ -127,12 +127,12 @@ const IndexComponent = {
         let suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (10+"%");
         //AssetNames
         //1
-        let suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
+        let suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (compraDeDolaresOficiales.assetName + " " + compraDeDolaresOficiales.entityName); //MANUAL
         //2
-        let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (compraDeDolaresOficiales.assetName + " " + compraDeDolaresOficiales.entityName); //MANUAL
+        let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoTradicionalReba.assetName + " " + plazoFijoTradicionalReba.entityName); //MANUAL
         //3
         let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
-        //TotalMoney
+        //TotalMoney 
         //1
         let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.30))); //MANUAL
         //2
@@ -444,25 +444,25 @@ function updateValuesInIndexPage(){
     //Three elements to invest
     //PercentajeOfInvestment
     //1
-    suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (25+"%");
+    suggestedInvestmentPercentajeOfInvestment1 = document.getElementById("strategy-suggested-1-percentage-of-investment").innerHTML = (30+"%");
     //2
-    suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (28+"%");
+    suggestedInvestmentPercentajeOfInvestment2 = document.getElementById("strategy-suggested-2-percentage-of-investment").innerHTML = (60+"%");
     //3
-    suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (47+"%");
-    //AssetNames
+    suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (10+"%");
+    //AssetNames 
     //1
-    suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
+    suggestedInvestmentAssetName1 = document.getElementById("strategy-suggested-1-asset-name").innerHTML = (compraDeDolaresOficiales.assetName + " " + compraDeDolaresOficiales.entityName); //MANUAL
     //2
-    suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
+    suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoTradicionalReba.assetName + " " + plazoFijoTradicionalReba.entityName); //MANUAL
     //3
-    suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (cajaRemuneradaReba.assetName + " " + cajaRemuneradaReba.entityName); //MANUAL
+    suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoMercadoPago.assetName + " " + fondoMercadoPago.entityName); //MANUAL
     //TotalMoney
     //1
-    suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.25))); //MANUAL
+    suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.30))); //MANUAL
     //2
-    suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.28))); //MANUAL
+    suggestedInvestmentTotalMoney2 = document.getElementById("strategy-suggested-2-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.60))); //MANUAL
     //3
-    suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.47))); //MANUAL
+    suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.10))); //MANUAL
     //Total Annual Yield
     //TotalAnnualYield
     totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated())+"%");
@@ -478,9 +478,9 @@ function thousandsSeparatorsForMoney(anAmountOfMoney) {
 
 function annualYieldCalculated() {
     return (
-        (0.25 * fondoMercadoPago.annualYield) + //MANUAL
-        (0.28 * plazoFijoUVASupervielle.annualYield) + //MANUAL
-        (0.47 * cajaRemuneradaReba.annualYield) //MANUAL
+        (0.30 * compraDeDolaresOficiales.annualYield) + //MANUAL
+        (0.60 * plazoFijoTradicionalReba.annualYield) + //MANUAL
+        (0.10 * fondoMercadoPago.annualYield) //MANUAL
     ) 
 }
 
