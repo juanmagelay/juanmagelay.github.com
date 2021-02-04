@@ -14,7 +14,7 @@ function updateValuesInStrategyPage() {
     //2
     let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
     //3
-    let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
+    let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (cajaRemuneradaReba.assetName + " " + cajaRemuneradaReba.entityName); //MANUAL
     //TotalMoney
     //1
     let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.25))); //MANUAL
@@ -39,7 +39,7 @@ function annualYieldCalculated() {
     return (
         (0.25 * fondoMercadoPago.annualYield) + //MANUAL
         (0.28 * plazoFijoUVASupervielle.annualYield) + //MANUAL
-        (0.47 * fondoSupervielle.annualYield) //MANUAL
+        (0.47 * cajaRemuneradaReba.annualYield) //MANUAL
     ) 
 }
 
@@ -97,12 +97,12 @@ function strategyBasedOnAmountAndDays(e) {
             
             //47% Fondo Supervielle
             var suggestedInvestmentPercentajeOfInvestment3 = document.getElementById("strategy-suggested-3-percentage-of-investment").innerHTML = (47+"%");
-            var suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
+            var suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (cajaRemuneradaReba.assetName + " " + cajaRemuneradaReba.entityName); //MANUAL
             var suggestedInvestmentTotalMoney3 = document.getElementById("strategy-suggested-3-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(anAmountValue * 0.47))); //MANUAL
 
-            annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle);
-            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle))+"%");
-            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, fondoSupervielle)*anAmountValue/100))));
+            annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, cajaRemuneradaReba);
+            var totalAnnualYield = document.getElementById("strategy-suggested-total-annual-yield").innerHTML = ("+"+Math.floor(annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, cajaRemuneradaReba))+"%");
+            var totalAnnualMoney = document.getElementById("strategy-suggested-total-annual-money").innerHTML = ("+$"+thousandsSeparatorsForMoney(Math.floor((annualYieldCalculated2(0.25, 0.28, 0.47, fondoMercadoPago, plazoFijoUVASupervielle, cajaRemuneradaReba)*anAmountValue/100))));
         
         } else if (anAmountValue > 2000 && aDaysValue <= 90) {
         
