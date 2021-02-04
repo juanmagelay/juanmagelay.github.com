@@ -60,7 +60,7 @@ function dollarValuesFromAPI(APIresult) {
         plazoFijoTradicionalReba.annualYield,
         plazoFijoTradicionalWilobank.annualYield,
         plazoFijoUVASupervielle.annualYield, 
-        fondoSupervielle.annualYield, 
+        cajaRemuneradaReba.annualYield, 
         fondoMercadoPago.annualYield,
         ruloConDolaresOficiales.annualYield,
         compraDeDolaresOficiales.annualYield,
@@ -75,7 +75,7 @@ function dollarValuesFromAPI(APIresult) {
         plazoFijoTradicionalReba,
         plazoFijoTradicionalWilobank,
         plazoFijoUVASupervielle, 
-        fondoSupervielle, 
+        cajaRemuneradaReba, 
         fondoMercadoPago,
         ruloConDolaresOficiales,
         compraDeDolaresOficiales,
@@ -107,7 +107,7 @@ let plazoFijoTradicionalBrubank = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Brubank", 
-    "Bancos tradicionales", 
+    "Bancos digitales", 
     "Plazo fijo", 
     "Pesos"
 );
@@ -115,7 +115,7 @@ let plazoFijoTradicionalReba = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     38, 
     "Reba", 
-    "Bancos tradicionales", 
+    "Bancos digitales", 
     "Plazo fijo", 
     "Pesos"
 );
@@ -123,7 +123,7 @@ let plazoFijoTradicionalWilobank = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     37, 
     "Wilobank", 
-    "Bancos tradicionales", 
+    "Bancos digitales", 
     "Plazo fijo", 
     "Pesos"
 );
@@ -135,17 +135,17 @@ let plazoFijoUVASupervielle = new InvestmentAsset( //MANUAL
     "Plazo fijo", 
     "Pesos"
 );
-let fondoSupervielle = new InvestmentAsset( //MANUAL
-    "Fondo", 
-    38.3, 
-    "Supervielle", 
-    "Bancos tradicionales", 
-    "Fondo", 
+let cajaRemuneradaReba = new InvestmentAsset( //MANUAL
+    "Caja remunerada", 
+    7, 
+    "Reba", 
+    "Bancos digitales", 
+    "Caja remunerada", 
     "Pesos"
 );
 let fondoMercadoPago = new InvestmentAsset( //MANUAL
     "Fondo", 
-    28.9, 
+    30, 
     "Mercado Pago", 
     "Billeteras", 
     "Fondo", 
@@ -187,7 +187,7 @@ let annualYields = [
     plazoFijoTradicionalReba.annualYield,
     plazoFijoTradicionalWilobank.annualYield,
     plazoFijoUVASupervielle.annualYield, 
-    fondoSupervielle.annualYield, 
+    cajaRemuneradaReba.annualYield, 
     fondoMercadoPago.annualYield,
     ruloConDolaresOficiales.annualYield,
     compraDeDolaresOficiales.annualYield,
@@ -211,7 +211,7 @@ let investmentAssets = [
     plazoFijoTradicionalReba,
     plazoFijoTradicionalWilobank,
     plazoFijoUVASupervielle, 
-    fondoSupervielle, 
+    cajaRemuneradaReba, 
     fondoMercadoPago,
     ruloConDolaresOficiales,
     compraDeDolaresOficiales,

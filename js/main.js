@@ -131,7 +131,7 @@ const IndexComponent = {
         //2
         let suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
         //3
-        let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
+        let suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (cajaRemuneradaReba.assetName + " " + cajaRemuneradaReba.entityName); //MANUAL
         //TotalMoney
         //1
         let suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.25))); //MANUAL
@@ -455,7 +455,7 @@ function updateValuesInIndexPage(){
     //2
     suggestedInvestmentAssetName2 = document.getElementById("strategy-suggested-2-asset-name").innerHTML = (plazoFijoUVASupervielle.assetName + " " + plazoFijoUVASupervielle.entityName); //MANUAL
     //3
-    suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (fondoSupervielle.assetName + " " + fondoSupervielle.entityName); //MANUAL
+    suggestedInvestmentAssetName3 = document.getElementById("strategy-suggested-3-asset-name").innerHTML = (cajaRemuneradaReba.assetName + " " + cajaRemuneradaReba.entityName); //MANUAL
     //TotalMoney
     //1
     suggestedInvestmentTotalMoney1 = document.getElementById("strategy-suggested-1-total-money").innerHTML = ("$"+thousandsSeparatorsForMoney(Math.floor(100000 * 0.25))); //MANUAL
@@ -480,7 +480,7 @@ function annualYieldCalculated() {
     return (
         (0.25 * fondoMercadoPago.annualYield) + //MANUAL
         (0.28 * plazoFijoUVASupervielle.annualYield) + //MANUAL
-        (0.47 * fondoSupervielle.annualYield) //MANUAL
+        (0.47 * cajaRemuneradaReba.annualYield) //MANUAL
     ) 
 }
 
