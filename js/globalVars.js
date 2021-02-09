@@ -145,7 +145,7 @@ let cajaRemuneradaReba = new InvestmentAsset( //MANUAL
 );
 let fondoMercadoPago = new InvestmentAsset( //MANUAL
     "Fondo", 
-    30, 
+    30.2, 
     "Mercado Pago", 
     "Billeteras", 
     "Fondo", 
